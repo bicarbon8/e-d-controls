@@ -14,27 +14,23 @@ export class ShipTabComponent implements OnInit, OnDestroy {
   bindingsStr: string;
   subscription: Subscription;
 
-  /** YAW */
+  /** HEADING */
   yawKey: string = 'root.yawaxisraw';
   yawLeftKey: string = 'root.yawleftbutton';
   yawRightKey: string = 'root.yawrightbutton';
-  /** ROLL */
   rollKey: string = 'root.rollaxisraw';
   rollLeftKey: string = 'root.rollleftbutton';
   rollRightKey: string = 'root.rollrightbutton';
-  /** PITCH */
   pitchKey: string = 'root.pitchaxisraw';
   pitchUpKey: string = 'root.pitchupbutton';
   pitchDownKey: string = 'root.pitchdownbutton';
-  /** LATERAL THRUST */
+  /** MOVEMENT */
   lateralThrustKey: string = 'root.lateralthrustraw';
   leftThrustKey: string = 'root.leftthrustbutton';
   rightThrustKey: string = 'root.rightthrustbutton';
-  /** VERTICAL THRUST */
   verticalThrustKey: string = 'root.verticalthrustraw';
   upThrustKey: string = 'root.upthrustbutton';
   downThrustKey: string = 'root.downthrustbutton';
-  /** AHEAD THRUST */
   aheadThrustKey: string = 'root.aheadthrustraw';
   forwardThrustKey: string = 'root.forwardthrustbutton';
   backwardThrustKey: string = 'root.backwardthrustbutton';
@@ -120,14 +116,6 @@ export class ShipTabComponent implements OnInit, OnDestroy {
       try {
         this.bindings = JSON.parse(message);
         console.info('successfully parsed message');
-        this.getBindingsFor("yawKey");
-        this.getBindingsFor("roll");
-        this.getBindingsFor("pitch");
-        this.getBindingsFor("verticalThrust");
-        this.getBindingsFor("leftThrust");
-        this.getBindingsFor("rightThrust");
-        this.getBindingsFor("forwardThrust");
-        this.getBindingsFor("backwardThrust");
       } catch (e) {
         console.error(`invalid message received: ${message}`);
       }
@@ -135,11 +123,13 @@ export class ShipTabComponent implements OnInit, OnDestroy {
   }
 
   getBindingsFor(key: string): string[] {
-    let ctrl: Input = Find.gamePadInput(this.bindings, this[`${key}Key`]);
-    if (ctrl) {
-      return ctrl.keys;
+    if (this.bindings) {
+      let ctrl: Input = Find.gamePadInput(this.bindings, this[`${key}Key`]);
+      if (ctrl) {
+        return ctrl.keys.reverse();
+      }
+      return [];
     }
-    return [];
   }
 
   ngOnInit(): void {

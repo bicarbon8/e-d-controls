@@ -1,4 +1,4 @@
-li i span {
+div i span {
     display: inline-block;
     width: 32px;
     height: 32px;
@@ -22,10 +22,19 @@ span.GamePad_DPadRight {
     background: url('/assets/GameControllerButtons.png') -160px -96px no-repeat;
 }
 span.GamePad_DPadDown {
-    background: url('/assets/GameControllerButtons.png') -64px -96px no-repeat;
+    background: url('/assets/GameControllerButtons.png') -32px -96px no-repeat;
 }
 span.GamePad_DPadLeft {
     background: url('/assets/GameControllerButtons.png') -64px -96px no-repeat;
+}
+span.GamePad_FaceUp {
+    background: url('/assets/GameControllerButtons.png') -96px 0px no-repeat;
+}
+span.GamePad_FaceRight {
+    background: url('/assets/GameControllerButtons.png') -32px 0px no-repeat;
+}
+span.GamePad_FaceDown {
+    background: url('/assets/GameControllerButtons.png') -0px 0px no-repeat;
 }
 span.GamePad_FaceLeft {
     background: url('/assets/GameControllerButtons.png') -64px 0px no-repeat;
