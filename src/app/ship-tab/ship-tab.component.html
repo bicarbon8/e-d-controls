@@ -1,0 +1,10 @@
+<div class="container">
+    <ul class="list-unstyled">
+        <li><span class="badge bg-secondary">Yaw: </span><i *ngFor="let y of getBindingsFor('yaw')"><span class="{{y}}"> &nbsp; </span></i></li>
+        <li><span class="badge bg-secondary">Roll: </span><i *ngFor="let r of getBindingsFor('roll')"><span class="{{r}}"> &nbsp; </span></i></li>
+        <li><span class="badge bg-secondary">Pitch: </span><i *ngFor="let p of getBindingsFor('pitch')"><span class="{{p}}"> &nbsp; </span></i></li>
+        <li><span class="badge bg-secondary">Vertical Thrust: </span><i *ngFor="let vt of getBindingsFor('verticalThrust')"><span class="{{vt}}"> &nbsp; </span></i></li>
+        <li><span class="badge bg-secondary">Left Thrust: </span><i *ngFor="let lt of getBindingsFor('leftThrust')"><span class="{{lt}}"> &nbsp; </span></i><span class="badge bg-secondary">Right Thrust: </span><i *ngFor="let rt of getBindingsFor('rightThrust')"><span class="{{rt}}"> &nbsp; </span></i></li>
+        <li><span class="badge bg-secondary">Forward Thrust: </span><i *ngFor="let ft of getBindingsFor('forwardThrust')"><span class="{{ft}}"> &nbsp; </span></i><span class="badge bg-secondary">Backward Thrust: </span><i *ngFor="let bt of getBindingsFor('backwardThrust')"><span class="{{bt}}"> &nbsp; </span></i></li>
+    </ul>
+</div>

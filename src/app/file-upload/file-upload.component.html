@@ -1,0 +1,9 @@
+<div class="container">
+    <input type="file" class="file-input" [accept]="requiredFileType" (change)="parseBindingsFile($event)" #fileUpload />
+    <div class="file-upload">
+      File: <span class="fst-italic fw-light">{{fileName || "No file uploaded yet."}} </span>
+      <button color="primary" class="btn btn-primary btn-sm" (click)="fileUpload.click()">
+        <i class="bi bi-controller"> </i><span class="fw-light"> Select Bindings File</span>
+      </button>
+    </div>
+</div>
