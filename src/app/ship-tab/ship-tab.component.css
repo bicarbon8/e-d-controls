@@ -39,3 +39,15 @@ span.GamePad_FaceDown {
 span.GamePad_FaceLeft {
     background: url('/assets/GameControllerButtons.png') -64px 0px no-repeat;
 }
+span.GamePad_LBumper {
+    background: url('/assets/GameControllerButtons.png') -128px 0px no-repeat;
+}
+span.GamePad_RBumper {
+    background: url('/assets/GameControllerButtons.png') -192px 0px no-repeat;
+}
+span.Pos_GamePad_LTrigger {
+    background: url('/assets/GameControllerButtons.png') -160px 0px no-repeat;
+}
+span.Pos_GamePad_RTrigger {
+    background: url('/assets/GameControllerButtons.png') -224px 0px no-repeat;
+}

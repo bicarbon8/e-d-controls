@@ -62,7 +62,7 @@ export module Find {
                 }
             }
         } catch (e) {
-            console.error(e);
+            console.error(`ERROR with keys '${keys}' due to: ${e}`);
         }
         return input;
     }

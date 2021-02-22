@@ -1,86 +1,107 @@
-<div class="card">
-    <div class="card-header">
-        Heading
-    </div>
-    <div class="card-body">
-        <div class="container">
-            <div class="row">
-                <div class="col yaw">
-                    <div class="container-fluid yaw">
-                        <div class="row yaw-raw">
-                            <div class="col" *ngIf="getBindingsFor('yaw').length > 0"><span class="badge bg-secondary">Yaw: </span><i *ngFor="let y of getBindingsFor('yaw')"><span class="{{y}}"> &nbsp; </span></i></div>
-                        </div>
-                        <div class="row yaw-separate">
-                            <div class="col" *ngIf="getBindingsFor('yawLeft').length > 0"><span class="badge bg-secondary">Yaw Left: </span><i *ngFor="let yl of getBindingsFor('yawLeft')"><span class="{{yl}}"> &nbsp; </span></i></div>
-                            <div class="col" *ngIf="getBindingsFor('yawRight').length > 0"><span class="badge bg-secondary">Yaw Right: </span><i *ngFor="let yr of getBindingsFor('yawRight')"><span class="{{yr}}"> &nbsp; </span></i></div>
-                        </div>
-                    </div>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col">
+            <div class="card">
+                <div class="card-header">Heading</div>
+                <div class="d-flex" *ngIf="getBindingsFor('yaw').length > 0">
+                    <div class="bg-light p-1 flex-shrink-0">Yaw: </div><div class="border border-light p-1 w-100"><i *ngFor="let y of getBindingsFor('yaw')"><span class="{{y}}"> &nbsp; </span></i></div>
                 </div>
-                <div class="col roll">
-                    <div class="container-fluid roll">
-                        <div class="row roll-raw">
-                            <div class="col" *ngIf="getBindingsFor('roll').length > 0"><span class="badge bg-secondary">Roll: </span><i *ngFor="let r of getBindingsFor('roll')"><span class="{{r}}"> &nbsp; </span></i></div>
-                        </div>
-                        <div class="row roll-separate">
-                            <div class="col" *ngIf="getBindingsFor('rollLeft').length > 0"><span class="badge bg-secondary">Roll Left: </span><i *ngFor="let rl of getBindingsFor('rollLeft')"><span class="{{rl}}"> &nbsp; </span></i></div>
-                            <div class="col" *ngIf="getBindingsFor('rollRight').length > 0"><span class="badge bg-secondary">Roll Right: </span><i *ngFor="let rr of getBindingsFor('rollRight')"><span class="{{rr}}"> &nbsp; </span></i></div>
-                        </div>
-                    </div>
+                <div class="d-flex" *ngIf="getBindingsFor('yawLeft').length > 0">
+                    <div class="bg-light p-1 flex-shrink-0">Yaw Left: </div><div class="border border-light p-1 w-100"><i *ngFor="let yl of getBindingsFor('yawLeft')"><span class="{{yl}}"> &nbsp; </span></i></div>
                 </div>
-                <div class="col pitch">
-                    <div class="container-fluid pitch">
-                        <div class="row pitch-raw">
-                            <div class="col" *ngIf="getBindingsFor('pitch').length > 0"><span class="badge bg-secondary">Pitch: </span><i *ngFor="let p of getBindingsFor('pitch')"><span class="{{p}}"> &nbsp; </span></i></div>
-                        </div>
-                        <div class="row pitch-separate">
-                            <div class="col" *ngIf="getBindingsFor('pitchUp').length > 0"><span class="badge bg-secondary">Pitch Up: </span><i *ngFor="let pu of getBindingsFor('pitchUp')"><span class="{{pu}}"> &nbsp; </span></i></div>
-                            <div class="col" *ngIf="getBindingsFor('pitchDown').length > 0"><span class="badge bg-secondary">Pitch Down: </span><i *ngFor="let pd of getBindingsFor('pitchDown')"><span class="{{pd}}"> &nbsp; </span></i></div>
-                        </div>
-                    </div>
+                <div class="d-flex" *ngIf="getBindingsFor('yawRight').length > 0">
+                    <div class="bg-light p-1 flex-shrink-0">Yaw Right: </div><div class="border border-light p-1 w-100"><i *ngFor="let yr of getBindingsFor('yawRight')"><span class="{{yr}}"> &nbsp; </span></i></div>
+                </div>
+                <div class="d-flex" *ngIf="getBindingsFor('roll').length > 0">
+                    <div class="bg-light p-1 flex-shrink-0">Roll: </div><div class="border border-light p-1 w-100"><i *ngFor="let r of getBindingsFor('roll')"><span class="{{r}}"> &nbsp; </span></i></div>
+                </div>
+                <div class="d-flex" *ngIf="getBindingsFor('rollLeft').length > 0">
+                    <div class="bg-light p-1 flex-shrink-0">Roll Left: </div><div class="border border-light p-1 w-100"><i *ngFor="let rl of getBindingsFor('rollLeft')"><span class="{{rl}}"> &nbsp; </span></i></div>
+                </div>
+                <div class="d-flex" *ngIf="getBindingsFor('rollRight').length > 0">
+                    <div class="bg-light p-1 flex-shrink-0">Roll Right: </div><div class="border border-light p-1 w-100"><i *ngFor="let rr of getBindingsFor('rollRight')"><span class="{{rr}}"> &nbsp; </span></i></div>
+                </div>
+                <div class="d-flex" *ngIf="getBindingsFor('pitch').length > 0">
+                    <div class="bg-light p-1 flex-shrink-0">Pitch: </div><div class="border border-light p-1 w-100"><i *ngFor="let p of getBindingsFor('pitch')"><span class="{{p}}"> &nbsp; </span></i></div>
+                </div>
+                <div class="d-flex" *ngIf="getBindingsFor('pitchUp').length > 0">
+                    <div class="bg-light p-1 flex-shrink-0">Pitch Up: </div><div class="border border-light p-1 w-100"><i *ngFor="let pu of getBindingsFor('pitchUp')"><span class="{{pu}}"> &nbsp; </span></i></div>
+                </div>
+                <div class="d-flex" *ngIf="getBindingsFor('pitchDown').length > 0">
+                    <div class="bg-light p-1 flex-shrink-0">Pitch Down: </div><div class="border border-light p-1 w-100"><i *ngFor="let pd of getBindingsFor('pitchDown')"><span class="{{pd}}"> &nbsp; </span></i></div>
                 </div>
             </div>
         </div>
-    </div>
-</div>
-<div class="card">
-    <div class="card-header">
-        Movement
-    </div>
-    <div class="card-body">
-        <div class="container">
-            <div class="row">
-                <div class="col vertical-thrust">
-                    <div class="container-fluid vertical-thrust">
-                        <div class="row vertical-thrust-raw">
-                            <div class="col" *ngIf="getBindingsFor('verticalThrust').length > 0"><span class="badge bg-secondary">Vertical Thrust: </span><i *ngFor="let vt of getBindingsFor('verticalThrust')"><span class="{{vt}}"> &nbsp; </span></i></div>
-                        </div>
-                        <div class="row vertical-thrust-separate">
-                            <div class="col" *ngIf="getBindingsFor('thrustUp').length > 0"><span class="badge bg-secondary">Thrust Up: </span><i *ngFor="let ut of getBindingsFor('upThrust')"><span class="{{ut}}"> &nbsp; </span></i></div>
-                            <div class="col" *ngIf="getBindingsFor('thrustDown').length > 0"><span class="badge bg-secondary">Down Thrust: </span><i *ngFor="let dt of getBindingsFor('downThrust')"><span class="{{dt}}"> &nbsp; </span></i></div>
-                        </div>
-                    </div>
+        <div class="col">
+            <div class="card">
+                <div class="card-header">Movement</div>
+                <div class="d-flex" *ngIf="getBindingsFor('verticalThrust').length > 0">
+                    <div class="bg-light p-1 flex-shrink-0">Vertical Thrust: </div><div class="border border-light p-1 w-100"><i *ngFor="let vt of getBindingsFor('verticalThrust')"><span class="{{vt}}"> &nbsp; </span></i></div>
                 </div>
-                <div class="col horizontal-thrust">
-                    <div class="container-fluid horizontal-thrust">
-                        <div class="row horizontal-thrust-raw">
-                            <div class="col" *ngIf="getBindingsFor('horizontalThrust').length > 0"><span class="badge bg-secondary">Horizontal Thrust: </span><i *ngFor="let ht of getBindingsFor('horizontalThrust')"><span class="{{ht}}"> &nbsp; </span></i></div>
-                        </div>
-                        <div class="row horizontal-thrust-separate">
-                            <div class="col" *ngIf="getBindingsFor('leftThrust').length > 0"><span class="badge bg-secondary">Left Thrust: </span><i *ngFor="let lt of getBindingsFor('leftThrust')"><span class="{{lt}}"> &nbsp; </span></i></div>
-                            <div class="col" *ngIf="getBindingsFor('rightThrust').length > 0"><span class="badge bg-secondary">Right Thrust: </span><i *ngFor="let rt of getBindingsFor('rightThrust')"><span class="{{rt}}"> &nbsp; </span></i></div>
-                        </div>
-                    </div>
+                <div class="d-flex" *ngIf="getBindingsFor('thrustUp').length > 0">
+                    <div class="bg-light p-1 flex-shrink-0">Thrust Up: </div><div class="border border-light p-1 w-100"><i *ngFor="let ut of getBindingsFor('upThrust')"><span class="{{ut}}"> &nbsp; </span></i></div>
                 </div>
-                <div class="col ahead-thrust">
-                    <div class="container-fluid ahead-thrust">
-                        <div class="row ahead-thrust-raw">
-                            <div class="col" *ngIf="getBindingsFor('aheadThrust').length > 0"><span class="badge bg-secondary">Ahead Thrust: </span><i *ngFor="let at of getBindingsFor('aheadThrust')"><span class="{{at}}"> &nbsp; </span></i></div>
-                        </div>
-                        <div class="row ahead-thrust-separate">
-                            <div class="col" *ngIf="getBindingsFor('forwardThrust').length > 0"><span class="badge bg-secondary">Forward Thrust: </span><i *ngFor="let ft of getBindingsFor('forwardThrust')"><span class="{{ft}}"> &nbsp; </span></i></div>
-                            <div class="col" *ngIf="getBindingsFor('backwardThrust').length > 0"><span class="badge bg-secondary">Backward Thrust: </span><i *ngFor="let bt of getBindingsFor('backwardThrust')"><span class="{{bt}}"> &nbsp; </span></i></div>
-                        </div>
-                    </div>
+                <div class="d-flex" *ngIf="getBindingsFor('thrustDown').length > 0">
+                    <div class="bg-light p-1 flex-shrink-0">Down Thrust: </div><div class="border border-light p-1 w-100"><i *ngFor="let dt of getBindingsFor('downThrust')"><span class="{{dt}}"> &nbsp; </span></i></div>
+                </div>
+                <div class="d-flex" *ngIf="getBindingsFor('horizontalThrust').length > 0">
+                    <div class="bg-light p-1 flex-shrink-0">Horizontal Thrust: </div><div class="border border-light p-1 w-100"><i *ngFor="let ht of getBindingsFor('horizontalThrust')"><span class="{{ht}}"> &nbsp; </span></i></div>
+                </div>
+                <div class="d-flex" *ngIf="getBindingsFor('leftThrust').length > 0">
+                    <div class="bg-light p-1 flex-shrink-0">Left Thrust: </div><div class="border border-light p-1 w-100"><i *ngFor="let lt of getBindingsFor('leftThrust')"><span class="{{lt}}"> &nbsp; </span></i></div>
+                </div>
+                <div class="d-flex" *ngIf="getBindingsFor('rightThrust').length > 0">
+                    <div class="bg-light p-1 flex-shrink-0">Right Thrust: </div><div class="border border-light p-1 w-100"><i *ngFor="let rt of getBindingsFor('rightThrust')"><span class="{{rt}}"> &nbsp; </span></i></div>
+                </div>
+                <div class="d-flex" *ngIf="getBindingsFor('aheadThrust').length > 0">
+                    <div class="bg-light p-1 flex-shrink-0">Ahead Thrust: </div><div class="border border-light p-1 w-100"><i *ngFor="let at of getBindingsFor('aheadThrust')"><span class="{{at}}"> &nbsp; </span></i></div>
+                </div>
+                <div class="d-flex" *ngIf="getBindingsFor('forwardThrust').length > 0">
+                    <div class="bg-light p-1 flex-shrink-0">Forward Thrust: </div><div class="border border-light p-1 w-100"><i *ngFor="let ft of getBindingsFor('forwardThrust')"><span class="{{ft}}"> &nbsp; </span></i></div>
+                </div>
+                <div class="d-flex" *ngIf="getBindingsFor('backwardThrust').length > 0">
+                    <div class="bg-light p-1 flex-shrink-0">Backward Thrust: </div><div class="border border-light p-1 w-100"><i *ngFor="let bt of getBindingsFor('backwardThrust')"><span class="{{bt}}"> &nbsp; </span></i></div>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card">
+                <div class="card-header">Thrust</div>
+                <div class="d-flex" *ngIf="getBindingsFor('throttle').length > 0">
+                    <div class="bg-light p-1 flex-shrink-0">Throttle: </div><div class="border border-light p-1 w-100"><i *ngFor="let t of getBindingsFor('thrust')"><span class="{{t}}"> &nbsp; </span></i></div>
+                </div>
+                <div class="d-flex" *ngIf="getBindingsFor('forward').length > 0">
+                    <div class="bg-light p-1 flex-shrink-0">Throttle Up: </div><div class="border border-light p-1 w-100"><i *ngFor="let tu of getBindingsFor('forward')"><span class="{{tu}}"> &nbsp; </span></i></div>
+                </div>
+                <div class="d-flex" *ngIf="getBindingsFor('backward').length > 0">
+                    <div class="bg-light p-1 flex-shrink-0">Throttle Down: </div><div class="border border-light p-1 w-100"><i *ngFor="let td of getBindingsFor('backward')"><span class="{{td}}"> &nbsp; </span></i></div>
+                </div>
+                <div class="d-flex" *ngIf="getBindingsFor('speedMinus100').length > 0">
+                    <div class="bg-light p-1 flex-shrink-0">Speed -100%: </div><div class="border border-light p-1 w-100"><i *ngFor="let t of getBindingsFor('speedMinus100')"><span class="{{t}}"> &nbsp; </span></i></div>
+                </div>
+                <div class="d-flex" *ngIf="getBindingsFor('speedMinus75').length > 0">
+                    <div class="bg-light p-1 flex-shrink-0">Speed -75%: </div><div class="border border-light p-1 w-100"><i *ngFor="let t of getBindingsFor('speedMinus75')"><span class="{{t}}"> &nbsp; </span></i></div>
+                </div>
+                <div class="d-flex" *ngIf="getBindingsFor('speedMinus50').length > 0">
+                    <div class="bg-light p-1 flex-shrink-0">Speed -50%: </div><div class="border border-light p-1 w-100"><i *ngFor="let t of getBindingsFor('speedMinus50')"><span class="{{t}}"> &nbsp; </span></i></div>
+                </div>
+                <div class="d-flex" *ngIf="getBindingsFor('speedMinus25').length > 0">
+                    <div class="bg-light p-1 flex-shrink-0">Speed -25%: </div><div class="border border-light p-1 w-100"><i *ngFor="let t of getBindingsFor('speedMinus25')"><span class="{{t}}"> &nbsp; </span></i></div>
+                </div>
+                <div class="d-flex" *ngIf="getBindingsFor('speedZero').length > 0">
+                    <div class="bg-light p-1 flex-shrink-0">Speed 0%: </div><div class="border border-light p-1 w-100"><i *ngFor="let t of getBindingsFor('speedZero')"><span class="{{t}}"> &nbsp; </span></i></div>
+                </div>
+                <div class="d-flex" *ngIf="getBindingsFor('speed25').length > 0">
+                    <div class="bg-light p-1 flex-shrink-0">Speed 25%: </div><div class="border border-light p-1 w-100"><i *ngFor="let t of getBindingsFor('speed25')"><span class="{{t}}"> &nbsp; </span></i></div>
+                </div>
+                <div class="d-flex" *ngIf="getBindingsFor('speed50').length > 0">
+                    <div class="bg-light p-1 flex-shrink-0">Speed 50%: </div><div class="border border-light p-1 w-100"><i *ngFor="let t of getBindingsFor('speed50')"><span class="{{t}}"> &nbsp; </span></i></div>
+                </div>
+                <div class="d-flex" *ngIf="getBindingsFor('speed75').length > 0">
+                    <div class="bg-light p-1 flex-shrink-0">Speed 75%: </div><div class="border border-light p-1 w-100"><i *ngFor="let t of getBindingsFor('speed75')"><span class="{{t}}"> &nbsp; </span></i></div>
+                </div>
+                <div class="d-flex" *ngIf="getBindingsFor('speed100').length > 0">
+                    <div class="bg-light p-1 flex-shrink-0">Speed 100%: </div><div class="border border-light p-1 w-100"><i *ngFor="let t of getBindingsFor('speed100')"><span class="{{t}}"> &nbsp; </span></i></div>
                 </div>
             </div>
         </div>

@@ -31,7 +31,7 @@ export class ShipTabComponent implements OnInit, OnDestroy {
   verticalThrustKey: string = 'root.verticalthrustraw';
   upThrustKey: string = 'root.upthrustbutton';
   downThrustKey: string = 'root.downthrustbutton';
-  aheadThrustKey: string = 'root.aheadthrustraw';
+  aheadThrustKey: string = 'root.aheadthrust';
   forwardThrustKey: string = 'root.forwardthrustbutton';
   backwardThrustKey: string = 'root.backwardthrustbutton';
   /** THROTTLE */
@@ -128,8 +128,8 @@ export class ShipTabComponent implements OnInit, OnDestroy {
       if (ctrl) {
         return ctrl.keys.reverse();
       }
-      return [];
     }
+    return [];
   }
 
   ngOnInit(): void {
