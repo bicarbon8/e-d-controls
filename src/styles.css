@@ -1,1 +1,69 @@
 /* You can add global styles to this file, and also import other style files */
+@import url("https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css");
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css");
+div.col-4 {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+div.card-header:only-child {
+    display: none;
+}
+div icon {
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+}
+icon.GamePad_RThumb {
+    background: url('/assets/img/GameControllerButtons.png') -128px 64px no-repeat;
+}
+icon.GamePad_RStickX {
+    background: url('/assets/img/GameControllerButtons.png') -96px -64px no-repeat;
+}
+icon.GamePad_RStickY {
+    background: url('/assets/img/GameControllerButtons.png') -224px -64px no-repeat;
+}
+icon.GamePad_LThumb {
+    background: url('/assets/img/GameControllerButtons.png') -128px -32px no-repeat;
+}
+icon.GamePad_LStickX {
+    background: url('/assets/img/GameControllerButtons.png') -96px -32px no-repeat;
+}
+icon.GamePad_LStickY {
+    background: url('/assets/img/GameControllerButtons.png') -224px -32px no-repeat;
+}
+icon.GamePad_DPadUp {
+    background: url('/assets/img/GameControllerButtons.png') -192px -96px no-repeat;
+}
+icon.GamePad_DPadRight {
+    background: url('/assets/img/GameControllerButtons.png') -160px -96px no-repeat;
+}
+icon.GamePad_DPadDown {
+    background: url('/assets/img/GameControllerButtons.png') -32px -96px no-repeat;
+}
+icon.GamePad_DPadLeft {
+    background: url('/assets/img/GameControllerButtons.png') -64px -96px no-repeat;
+}
+icon.GamePad_FaceUp {
+    background: url('/assets/img/GameControllerButtons.png') -96px 0px no-repeat;
+}
+icon.GamePad_FaceRight {
+    background: url('/assets/img/GameControllerButtons.png') -32px 0px no-repeat;
+}
+icon.GamePad_FaceDown {
+    background: url('/assets/img/GameControllerButtons.png') -0px 0px no-repeat;
+}
+icon.GamePad_FaceLeft {
+    background: url('/assets/img/GameControllerButtons.png') -64px 0px no-repeat;
+}
+icon.GamePad_LBumper {
+    background: url('/assets/img/GameControllerButtons.png') -128px 0px no-repeat;
+}
+icon.GamePad_RBumper {
+    background: url('/assets/img/GameControllerButtons.png') -192px 0px no-repeat;
+}
+icon.Pos_GamePad_LTrigger {
+    background: url('/assets/img/GameControllerButtons.png') -160px 0px no-repeat;
+}
+icon.Pos_GamePad_RTrigger {
+    background: url('/assets/img/GameControllerButtons.png') -224px 0px no-repeat;
+}

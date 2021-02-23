@@ -1,4 +1,4 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { AfterViewChecked, AfterViewInit, Component, OnDestroy, OnInit } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { Find } from 'src/helpers/find';
 import { Input } from 'src/helpers/input';
@@ -9,7 +9,7 @@ import { BindingsDataService } from '../bindings-data.service';
   templateUrl: './ship-tab.component.html',
   styleUrls: ['./ship-tab.component.css']
 })
-export class ShipTabComponent implements OnInit, OnDestroy {
+export class ShipTabComponent implements OnInit, OnDestroy, AfterViewChecked {
   bindings: Object;
   bindingsStr: string;
   subscription: Subscription;
@@ -134,6 +134,12 @@ export class ShipTabComponent implements OnInit, OnDestroy {
 
   ngOnInit(): void {
     this.subscription = this.dataSvc.currentMessage.subscribe(message => this.updateBindings(message));
+  }
+
+  ngAfterViewChecked(): void {
+    try {
+      new Masonry('.masonry-grid');
+    } catch (e) { /* ignore */ }
   }
 
   ngOnDestroy(): void {
