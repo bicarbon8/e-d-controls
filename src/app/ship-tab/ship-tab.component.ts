@@ -47,10 +47,22 @@ export class ShipTabComponent implements OnInit, OnDestroy, AfterViewChecked {
   speed50Key: string = 'root.setspeed50';
   speed75Key: string = 'root.setspeed75';
   speed100Key: string = 'root.setspeed100';
-  /** FLIGHT MISC. */
   toggleFlightAssistKey: string = 'root.toggleflightassist';
   boostKey: string = 'root.useboostjuice';
+  /** FLIGHT MISC. */
   toggleSilentRunningKey: string = 'root.togglebuttonupinput';
+  toggleLightsKey: string = 'root.shipspotlighttoggle';
+  radarRangeKey: string = 'root.radarrangeaxis';
+  increaseRadarRangeKey: string = 'root.radarincreaserange';
+  decreaseRadarRangeKey: string = 'root.radardecreaserange';
+  pipsToEnginesKey: string = 'root.increaseenginespower';
+  pipsToWeaponsKey: string = 'root.increaseweaponspower';
+  pipsToSystemsKey: string = 'root.increasesystemspower';
+  resetPipsKey: string = 'root.resetpowerdistribution';
+  toggleCargoScoopKey: string = 'root.togglecargoscoop';
+  ejectAllCargoKey: string = 'root.ejectallcargo';
+  toggleLandingGearKey: string = 'root.landinggeartoggle';
+  toggleNightVisionKey: string = 'root.nightvisiontoggle';
   /** HYPERSPACE / SUPERCRUISE */
   hyperSuperCombiKey: string = 'root.hypersupercombination';
   supercruiseKey: string = 'root.supercruise';
@@ -81,21 +93,9 @@ export class ShipTabComponent implements OnInit, OnDestroy, AfterViewChecked {
   toggleHudModeKey: string = 'root.playerhudmodetoggle';
   /** UTILITIES */
   deployHeatsinkKey: string = 'root.deployheatsink';
-  toggleLightsKey: string = 'root.shipspotlighttoggle';
-  radarRangeKey: string = 'root.radarrangeaxis';
-  increaseRadarRangeKey: string = 'root.radarincreaserange';
-  decreaseRadarRangeKey: string = 'root.radardecreaserange';
-  pipsToEnginesKey: string = 'root.increaseenginespower';
-  pipsToWeaponsKey: string = 'root.increaseweaponspower';
-  pipsToSystemsKey: string = 'root.increasesystemspower';
-  resetPipsKey: string = 'root.resetpowerdistribution';
-  toggleCargoScoopKey: string = 'root.togglecargoscoop';
-  ejectAllCargoKey: string = 'root.ejectallcargo';
-  toggleLandingGearKey: string = 'root.landinggeartoggle';
   useShieldCellKey: string = 'root.useshieldcell';
   useChaffKey: string = 'root.firechafflauncher';
   chargeEcmKey: string = 'root.chargeecm';
-  toggleNightVisionKey: string = 'root.nightvisiontoggle';
   /** UI / MENUS */
   uiFocusKey: string = 'root.uifocus';
   focusLeftPanelKey: string = 'root.focusleftpanel';

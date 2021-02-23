@@ -1,135 +1,264 @@
 <div class="container">
     <div class="row masonry-grid" data-masonry='{"percentPosition": true }'>
-        <div class="col-4 heading">
+        <div class="col-lg-4 heading">
             <div class="card">
-                <div class="card-header">Heading</div>
+                <div class="card-header fs-6">Heading</div>
                 <div class="d-flex" *ngIf="getBindingsFor('yaw')?.length">
-                    <div class="bg-light p-1 flex-shrink-0">Yaw: </div><div class="border border-light p-1 w-100"><icon *ngFor="let y of getBindingsFor('yaw')" class="{{y}}"> &nbsp; </icon></div>
+                    <div class="bg-light p-1 fs-7">Yaw: </div><div class="border border-light p-1 flex-fill"><icon *ngFor="let y of getBindingsFor('yaw')" class="{{y}}"> &nbsp; </icon></div>
                 </div>
                 <div class="d-flex" *ngIf="getBindingsFor('yawLeft')?.length">
-                    <div class="bg-light p-1 flex-shrink-0">Yaw Left: </div><div class="border border-light p-1 w-100"><icon *ngFor="let yl of getBindingsFor('yawLeft')" class="{{yl}}"> &nbsp; </icon></div>
+                    <div class="bg-light p-1 fs-7">Yaw Left: </div><div class="border border-light p-1 flex-fill"><icon *ngFor="let yl of getBindingsFor('yawLeft')" class="{{yl}}"> &nbsp; </icon></div>
                 </div>
                 <div class="d-flex" *ngIf="getBindingsFor('yawRight')?.length">
-                    <div class="bg-light p-1 flex-shrink-0">Yaw Right: </div><div class="border border-light p-1 w-100"><icon *ngFor="let yr of getBindingsFor('yawRight')" class="{{yr}}"> &nbsp; </icon></div>
+                    <div class="bg-light p-1 fs-7">Yaw Right: </div><div class="border border-light p-1 flex-fill"><icon *ngFor="let yr of getBindingsFor('yawRight')" class="{{yr}}"> &nbsp; </icon></div>
                 </div>
                 <div class="d-flex" *ngIf="getBindingsFor('roll')?.length">
-                    <div class="bg-light p-1 flex-shrink-0">Roll: </div><div class="border border-light p-1 w-100"><icon *ngFor="let r of getBindingsFor('roll')" class="{{r}}"> &nbsp; </icon></div>
+                    <div class="bg-light p-1 fs-7">Roll: </div><div class="border border-light p-1 flex-fill"><icon *ngFor="let r of getBindingsFor('roll')" class="{{r}}"> &nbsp; </icon></div>
                 </div>
                 <div class="d-flex" *ngIf="getBindingsFor('rollLeft')?.length">
-                    <div class="bg-light p-1 flex-shrink-0">Roll Left: </div><div class="border border-light p-1 w-100"><icon *ngFor="let rl of getBindingsFor('rollLeft')" class="{{rl}}"> &nbsp; </icon></div>
+                    <div class="bg-light p-1 fs-7">Roll Left: </div><div class="border border-light p-1 flex-fill"><icon *ngFor="let rl of getBindingsFor('rollLeft')" class="{{rl}}"> &nbsp; </icon></div>
                 </div>
                 <div class="d-flex" *ngIf="getBindingsFor('rollRight')?.length">
-                    <div class="bg-light p-1 flex-shrink-0">Roll Right: </div><div class="border border-light p-1 w-100"><icon *ngFor="let rr of getBindingsFor('rollRight')" class="{{rr}}"> &nbsp; </icon></div>
+                    <div class="bg-light p-1 fs-7">Roll Right: </div><div class="border border-light p-1 flex-fill"><icon *ngFor="let rr of getBindingsFor('rollRight')" class="{{rr}}"> &nbsp; </icon></div>
                 </div>
                 <div class="d-flex" *ngIf="getBindingsFor('pitch')?.length">
-                    <div class="bg-light p-1 flex-shrink-0">Pitch: </div><div class="border border-light p-1 w-100"><icon *ngFor="let p of getBindingsFor('pitch')" class="{{p}}"> &nbsp; </icon></div>
+                    <div class="bg-light p-1 fs-7">Pitch: </div><div class="border border-light p-1 flex-fill"><icon *ngFor="let p of getBindingsFor('pitch')" class="{{p}}"> &nbsp; </icon></div>
                 </div>
                 <div class="d-flex" *ngIf="getBindingsFor('pitchUp')?.length">
-                    <div class="bg-light p-1 flex-shrink-0">Pitch Up: </div><div class="border border-light p-1 w-100"><icon *ngFor="let pu of getBindingsFor('pitchUp')" class="{{pu}}"> &nbsp; </icon></div>
+                    <div class="bg-light p-1 fs-7">Pitch Up: </div><div class="border border-light p-1 flex-fill"><icon *ngFor="let pu of getBindingsFor('pitchUp')" class="{{pu}}"> &nbsp; </icon></div>
                 </div>
                 <div class="d-flex" *ngIf="getBindingsFor('pitchDown')?.length">
-                    <div class="bg-light p-1 flex-shrink-0">Pitch Down: </div><div class="border border-light p-1 w-100"><icon *ngFor="let pd of getBindingsFor('pitchDown')" class="{{pd}}"> &nbsp; </icon></div>
+                    <div class="bg-light p-1 fs-7">Pitch Down: </div><div class="border border-light p-1 flex-fill"><icon *ngFor="let pd of getBindingsFor('pitchDown')" class="{{pd}}"> &nbsp; </icon></div>
                 </div>
             </div>
         </div>
-        <div class="col-4 movement">
+        <div class="col-lg-4 movement">
             <div class="card">
-                <div class="card-header">Movement</div>
+                <div class="card-header fs-6">Movement</div>
                 <div class="d-flex" *ngIf="getBindingsFor('verticalThrust')?.length">
-                    <div class="bg-light p-1 flex-shrink-0">Vertical Thrust: </div><div class="border border-light p-1 w-100"><icon *ngFor="let vt of getBindingsFor('verticalThrust')" class="{{vt}}"> &nbsp; </icon></div>
+                    <div class="bg-light p-1 fs-7">Vertical Thrust: </div><div class="border border-light p-1 flex-fill"><icon *ngFor="let vt of getBindingsFor('verticalThrust')" class="{{vt}}"> &nbsp; </icon></div>
                 </div>
                 <div class="d-flex" *ngIf="getBindingsFor('thrustUp')?.length">
-                    <div class="bg-light p-1 flex-shrink-0">Thrust Up: </div><div class="border border-light p-1 w-100"><icon *ngFor="let ut of getBindingsFor('upThrust')" class="{{ut}}"> &nbsp; </icon></div>
+                    <div class="bg-light p-1 fs-7">Thrust Up: </div><div class="border border-light p-1 flex-fill"><icon *ngFor="let ut of getBindingsFor('upThrust')" class="{{ut}}"> &nbsp; </icon></div>
                 </div>
                 <div class="d-flex" *ngIf="getBindingsFor('thrustDown')?.length">
-                    <div class="bg-light p-1 flex-shrink-0">Down Thrust: </div><div class="border border-light p-1 w-100"><icon *ngFor="let dt of getBindingsFor('downThrust')" class="{{dt}}"> &nbsp; </icon></div>
+                    <div class="bg-light p-1 fs-7">Down Thrust: </div><div class="border border-light p-1 flex-fill"><icon *ngFor="let dt of getBindingsFor('downThrust')" class="{{dt}}"> &nbsp; </icon></div>
                 </div>
                 <div class="d-flex" *ngIf="getBindingsFor('horizontalThrust')?.length">
-                    <div class="bg-light p-1 flex-shrink-0">Horizontal Thrust: </div><div class="border border-light p-1 w-100"><icon *ngFor="let ht of getBindingsFor('horizontalThrust')" class="{{ht}}"> &nbsp; </icon></div>
+                    <div class="bg-light p-1 fs-7">Horizontal Thrust: </div><div class="border border-light p-1 flex-fill"><icon *ngFor="let ht of getBindingsFor('horizontalThrust')" class="{{ht}}"> &nbsp; </icon></div>
                 </div>
                 <div class="d-flex" *ngIf="getBindingsFor('leftThrust')?.length">
-                    <div class="bg-light p-1 flex-shrink-0">Left Thrust: </div><div class="border border-light p-1 w-100"><icon *ngFor="let lt of getBindingsFor('leftThrust')" class="{{lt}}"> &nbsp; </icon></div>
+                    <div class="bg-light p-1 fs-7">Left Thrust: </div><div class="border border-light p-1 flex-fill"><icon *ngFor="let lt of getBindingsFor('leftThrust')" class="{{lt}}"> &nbsp; </icon></div>
                 </div>
                 <div class="d-flex" *ngIf="getBindingsFor('rightThrust')?.length">
-                    <div class="bg-light p-1 flex-shrink-0">Right Thrust: </div><div class="border border-light p-1 w-100"><icon *ngFor="let rt of getBindingsFor('rightThrust')" class="{{rt}}"> &nbsp; </icon></div>
+                    <div class="bg-light p-1 fs-7">Right Thrust: </div><div class="border border-light p-1 flex-fill"><icon *ngFor="let rt of getBindingsFor('rightThrust')" class="{{rt}}"> &nbsp; </icon></div>
                 </div>
                 <div class="d-flex" *ngIf="getBindingsFor('aheadThrust')?.length">
-                    <div class="bg-light p-1 flex-shrink-0">Ahead Thrust: </div><div class="border border-light p-1 w-100"><icon *ngFor="let at of getBindingsFor('aheadThrust')" class="{{at}}"> &nbsp; </icon></div>
+                    <div class="bg-light p-1 fs-7">Ahead Thrust: </div><div class="border border-light p-1 flex-fill"><icon *ngFor="let at of getBindingsFor('aheadThrust')" class="{{at}}"> &nbsp; </icon></div>
                 </div>
                 <div class="d-flex" *ngIf="getBindingsFor('forwardThrust')?.length">
-                    <div class="bg-light p-1 flex-shrink-0">Forward Thrust: </div><div class="border border-light p-1 w-100"><icon *ngFor="let ft of getBindingsFor('forwardThrust')" class="{{ft}}"> &nbsp; </icon></div>
+                    <div class="bg-light p-1 fs-7">Forward Thrust: </div><div class="border border-light p-1 flex-fill"><icon *ngFor="let ft of getBindingsFor('forwardThrust')" class="{{ft}}"> &nbsp; </icon></div>
                 </div>
                 <div class="d-flex" *ngIf="getBindingsFor('backwardThrust')?.length">
-                    <div class="bg-light p-1 flex-shrink-0">Backward Thrust: </div><div class="border border-light p-1 w-100"><icon *ngFor="let bt of getBindingsFor('backwardThrust')" class="{{bt}}"> &nbsp; </icon></div>
+                    <div class="bg-light p-1 fs-7">Backward Thrust: </div><div class="border border-light p-1 flex-fill"><icon *ngFor="let bt of getBindingsFor('backwardThrust')" class="{{bt}}"> &nbsp; </icon></div>
                 </div>
             </div>
         </div>
-        <div class="col-4 thrust">
+        <div class="col-lg-4 thrust">
             <div class="card">
-                <div class="card-header">Thrust</div>
+                <div class="card-header fs-6">Thrust</div>
                 <div class="d-flex" *ngIf="getBindingsFor('throttle')?.length">
-                    <div class="bg-light p-1 flex-shrink-0">Throttle: </div><div class="border border-light p-1 w-100"><icon *ngFor="let t of getBindingsFor('thrust')" class="{{t}}"> &nbsp; </icon></div>
+                    <div class="bg-light p-1 fs-7">Throttle: </div><div class="border border-light p-1 flex-fill"><icon *ngFor="let t of getBindingsFor('thrust')" class="{{t}}"> &nbsp; </icon></div>
                 </div>
                 <div class="d-flex" *ngIf="getBindingsFor('forward')?.length">
-                    <div class="bg-light p-1 flex-shrink-0">Throttle Up: </div><div class="border border-light p-1 w-100"><icon *ngFor="let tu of getBindingsFor('forward')" class="{{tu}}"> &nbsp; </icon></div>
+                    <div class="bg-light p-1 fs-7">Throttle Up: </div><div class="border border-light p-1 flex-fill"><icon *ngFor="let tu of getBindingsFor('forward')" class="{{tu}}"> &nbsp; </icon></div>
                 </div>
                 <div class="d-flex" *ngIf="getBindingsFor('backward')?.length">
-                    <div class="bg-light p-1 flex-shrink-0">Throttle Down: </div><div class="border border-light p-1 w-100"><icon *ngFor="let td of getBindingsFor('backward')" class="{{td}}"> &nbsp; </icon></div>
+                    <div class="bg-light p-1 fs-7">Throttle Down: </div><div class="border border-light p-1 flex-fill"><icon *ngFor="let td of getBindingsFor('backward')" class="{{td}}"> &nbsp; </icon></div>
                 </div>
-                <div class="d-flex" *ngIf="getBindingsFor('speedMinus100')?.length">
-                    <div class="bg-light p-1 flex-shrink-0">Speed -100%: </div><div class="border border-light p-1 w-100"><icon *ngFor="let t of getBindingsFor('speedMinus100')" class="{{t}}"> &nbsp; </icon></div>
-                </div>
-                <div class="d-flex" *ngIf="getBindingsFor('speedMinus75')?.length">
-                    <div class="bg-light p-1 flex-shrink-0">Speed -75%: </div><div class="border border-light p-1 w-100"><icon *ngFor="let t of getBindingsFor('speedMinus75')" class="{{t}}"> &nbsp; </icon></div>
-                </div>
-                <div class="d-flex" *ngIf="getBindingsFor('speedMinus50')?.length">
-                    <div class="bg-light p-1 flex-shrink-0">Speed -50%: </div><div class="border border-light p-1 w-100"><icon *ngFor="let t of getBindingsFor('speedMinus50')" class="{{t}}"> &nbsp; </icon></div>
-                </div>
-                <div class="d-flex" *ngIf="getBindingsFor('speedMinus25')?.length">
-                    <div class="bg-light p-1 flex-shrink-0">Speed -25%: </div><div class="border border-light p-1 w-100"><icon *ngFor="let t of getBindingsFor('speedMinus25')" class="{{t}}"> &nbsp; </icon></div>
-                </div>
-                <div class="d-flex" *ngIf="getBindingsFor('speedZero')?.length">
-                    <div class="bg-light p-1 flex-shrink-0">Speed 0%: </div><div class="border border-light p-1 w-100"><icon *ngFor="let t of getBindingsFor('speedZero')" class="{{t}}"> &nbsp; </icon></div>
-                </div>
-                <div class="d-flex" *ngIf="getBindingsFor('speed25')?.length">
-                    <div class="bg-light p-1 flex-shrink-0">Speed 25%: </div><div class="border border-light p-1 w-100"><icon *ngFor="let t of getBindingsFor('speed25')" class="{{t}}"> &nbsp; </icon></div>
-                </div>
-                <div class="d-flex" *ngIf="getBindingsFor('speed50')?.length">
-                    <div class="bg-light p-1 flex-shrink-0">Speed 50%: </div><div class="border border-light p-1 w-100"><icon *ngFor="let t of getBindingsFor('speed50')" class="{{t}}"> &nbsp; </icon></div>
-                </div>
-                <div class="d-flex" *ngIf="getBindingsFor('speed75')?.length">
-                    <div class="bg-light p-1 flex-shrink-0">Speed 75%: </div><div class="border border-light p-1 w-100"><icon *ngFor="let t of getBindingsFor('speed75')" class="{{t}}"> &nbsp; </icon></div>
-                </div>
-                <div class="d-flex" *ngIf="getBindingsFor('speed100')?.length">
-                    <div class="bg-light p-1 flex-shrink-0">Speed 100%: </div><div class="border border-light p-1 w-100"><icon *ngFor="let t of getBindingsFor('speed100')" class="{{t}}"> &nbsp; </icon></div>
-                </div>
-            </div>
-        </div>
-        <div class="col-4 flight-misc">
-            <div class="card">
-                <div class="card-header">Flight Misc.</div>
                 <div class="d-flex" *ngIf="getBindingsFor('toggleFlightAssist')?.length">
-                    <div class="bg-light p-1 flex-shrink-0">Toggle Flight Assist: </div><div class="border border-light p-1 w-100"><icon *ngFor="let t of getBindingsFor('toggleFlightAssist')" class="{{t}}"> &nbsp; </icon></div>
+                    <div class="bg-light p-1 fs-7">Toggle Flight Assist: </div><div class="border border-light p-1 flex-fill"><icon *ngFor="let t of getBindingsFor('toggleFlightAssist')" class="{{t}}"> &nbsp; </icon></div>
                 </div>
                 <div class="d-flex" *ngIf="getBindingsFor('boost')?.length">
-                    <div class="bg-light p-1 flex-shrink-0">Boost: </div><div class="border border-light p-1 w-100"><icon *ngFor="let t of getBindingsFor('boost')" class="{{t}}"> &nbsp; </icon></div>
+                    <div class="bg-light p-1 fs-7">Boost: </div><div class="border border-light p-1 flex-fill"><icon *ngFor="let t of getBindingsFor('boost')" class="{{t}}"> &nbsp; </icon></div>
                 </div>
-                <div class="d-flex" *ngIf="getBindingsFor('toggleSilentRunning')?.length">
-                    <div class="bg-light p-1 flex-shrink-0">Toggle Silent Running: </div><div class="border border-light p-1 w-100"><icon *ngFor="let t of getBindingsFor('toggleSilentRunning')" class="{{t}}"> &nbsp; </icon></div>
+                <div class="d-flex" *ngIf="getBindingsFor('speedMinus100')?.length">
+                    <div class="bg-light p-1 fs-7">Speed -100%: </div><div class="border border-light p-1 flex-fill"><icon *ngFor="let t of getBindingsFor('speedMinus100')" class="{{t}}"> &nbsp; </icon></div>
+                </div>
+                <div class="d-flex" *ngIf="getBindingsFor('speedMinus75')?.length">
+                    <div class="bg-light p-1 fs-7">Speed -75%: </div><div class="border border-light p-1 flex-fill"><icon *ngFor="let t of getBindingsFor('speedMinus75')" class="{{t}}"> &nbsp; </icon></div>
+                </div>
+                <div class="d-flex" *ngIf="getBindingsFor('speedMinus50')?.length">
+                    <div class="bg-light p-1 fs-7">Speed -50%: </div><div class="border border-light p-1 flex-fill"><icon *ngFor="let t of getBindingsFor('speedMinus50')" class="{{t}}"> &nbsp; </icon></div>
+                </div>
+                <div class="d-flex" *ngIf="getBindingsFor('speedMinus25')?.length">
+                    <div class="bg-light p-1 fs-7">Speed -25%: </div><div class="border border-light p-1 flex-fill"><icon *ngFor="let t of getBindingsFor('speedMinus25')" class="{{t}}"> &nbsp; </icon></div>
+                </div>
+                <div class="d-flex" *ngIf="getBindingsFor('speedZero')?.length">
+                    <div class="bg-light p-1 fs-7">Speed 0%: </div><div class="border border-light p-1 flex-fill"><icon *ngFor="let t of getBindingsFor('speedZero')" class="{{t}}"> &nbsp; </icon></div>
+                </div>
+                <div class="d-flex" *ngIf="getBindingsFor('speed25')?.length">
+                    <div class="bg-light p-1 fs-7">Speed 25%: </div><div class="border border-light p-1 flex-fill"><icon *ngFor="let t of getBindingsFor('speed25')" class="{{t}}"> &nbsp; </icon></div>
+                </div>
+                <div class="d-flex" *ngIf="getBindingsFor('speed50')?.length">
+                    <div class="bg-light p-1 fs-7">Speed 50%: </div><div class="border border-light p-1 flex-fill"><icon *ngFor="let t of getBindingsFor('speed50')" class="{{t}}"> &nbsp; </icon></div>
+                </div>
+                <div class="d-flex" *ngIf="getBindingsFor('speed75')?.length">
+                    <div class="bg-light p-1 fs-7">Speed 75%: </div><div class="border border-light p-1 flex-fill"><icon *ngFor="let t of getBindingsFor('speed75')" class="{{t}}"> &nbsp; </icon></div>
+                </div>
+                <div class="d-flex" *ngIf="getBindingsFor('speed100')?.length">
+                    <div class="bg-light p-1 fs-7">Speed 100%: </div><div class="border border-light p-1 flex-fill"><icon *ngFor="let t of getBindingsFor('speed100')" class="{{t}}"> &nbsp; </icon></div>
                 </div>
             </div>
         </div>
-        <div class="col-4 frame-shift">
+        <div class="col-lg-4 flight-misc">
             <div class="card">
-                <div class="card-header">Frame Shift</div>
+                <div class="card-header fs-6">Flight Misc.</div>
+                <div class="d-flex" *ngIf="getBindingsFor('toggleSilentRunning')?.length">
+                    <div class="bg-light p-1 fs-7">Toggle Silent Running: </div><div class="border border-light p-1 flex-fill"><icon *ngFor="let t of getBindingsFor('toggleSilentRunning')" class="{{t}}"> &nbsp; </icon></div>
+                </div>
+                <div class="d-flex" *ngIf="getBindingsFor('toggleLights')?.length">
+                    <div class="bg-light p-1 fs-7">Toggle Lights: </div><div class="border border-light p-1 flex-fill"><icon *ngFor="let t of getBindingsFor('toggleLights')" class="{{t}}"> &nbsp; </icon></div>
+                </div>
+                <div class="d-flex" *ngIf="getBindingsFor('radarRange')?.length">
+                    <div class="bg-light p-1 fs-7">Radar Zoom: </div><div class="border border-light p-1 flex-fill"><icon *ngFor="let t of getBindingsFor('radarRange')" class="{{t}}"> &nbsp; </icon></div>
+                </div>
+                <div class="d-flex" *ngIf="getBindingsFor('increaseRadarRange')?.length">
+                    <div class="bg-light p-1 fs-7">Radar Zoom Out: </div><div class="border border-light p-1 flex-fill"><icon *ngFor="let t of getBindingsFor('increaseRadarRange')" class="{{t}}"> &nbsp; </icon></div>
+                </div>
+                <div class="d-flex" *ngIf="getBindingsFor('decreaseRadarRange')?.length">
+                    <div class="bg-light p-1 fs-7">Radar Zoom In: </div><div class="border border-light p-1 flex-fill"><icon *ngFor="let t of getBindingsFor('decreaseRadarRange')" class="{{t}}"> &nbsp; </icon></div>
+                </div>
+                <div class="d-flex" *ngIf="getBindingsFor('pipsToEngines')?.length">
+                    <div class="bg-light p-1 fs-7">PIPs to Engines: </div><div class="border border-light p-1 flex-fill"><icon *ngFor="let t of getBindingsFor('pipsToEngines')" class="{{t}}"> &nbsp; </icon></div>
+                </div>
+                <div class="d-flex" *ngIf="getBindingsFor('pipsToWeapons')?.length">
+                    <div class="bg-light p-1 fs-7">PIPs to Weapons: </div><div class="border border-light p-1 flex-fill"><icon *ngFor="let t of getBindingsFor('pipsToWeapons')" class="{{t}}"> &nbsp; </icon></div>
+                </div>
+                <div class="d-flex" *ngIf="getBindingsFor('pipsToSystems')?.length">
+                    <div class="bg-light p-1 fs-7">PIPs to Systems: </div><div class="border border-light p-1 flex-fill"><icon *ngFor="let t of getBindingsFor('pipsToSystems')" class="{{t}}"> &nbsp; </icon></div>
+                </div>
+                <div class="d-flex" *ngIf="getBindingsFor('resetPips')?.length">
+                    <div class="bg-light p-1 fs-7">Reset PIPs: </div><div class="border border-light p-1 flex-fill"><icon *ngFor="let t of getBindingsFor('resetPips')" class="{{t}}"> &nbsp; </icon></div>
+                </div>
+                <div class="d-flex" *ngIf="getBindingsFor('toggleCargoScoop')?.length">
+                    <div class="bg-light p-1 fs-7">Toggle Cargo Scoop: </div><div class="border border-light p-1 flex-fill"><icon *ngFor="let t of getBindingsFor('toggleCargoScoop')" class="{{t}}"> &nbsp; </icon></div>
+                </div>
+                <div class="d-flex" *ngIf="getBindingsFor('ejectAllCargo')?.length">
+                    <div class="bg-light p-1 fs-7">Eject All Cargo: </div><div class="border border-light p-1 flex-fill"><icon *ngFor="let t of getBindingsFor('ejectAllCargo')" class="{{t}}"> &nbsp; </icon></div>
+                </div>
+                <div class="d-flex" *ngIf="getBindingsFor('toggleLandingGear')?.length">
+                    <div class="bg-light p-1 fs-7">Toggle Landing Gear: </div><div class="border border-light p-1 flex-fill"><icon *ngFor="let t of getBindingsFor('toggleLandingGear')" class="{{t}}"> &nbsp; </icon></div>
+                </div>
+                <div class="d-flex" *ngIf="getBindingsFor('toggleNightVision')?.length">
+                    <div class="bg-light p-1 fs-7">Toggle Night Vision: </div><div class="border border-light p-1 flex-fill"><icon *ngFor="let t of getBindingsFor('toggleNightVision')" class="{{t}}"> &nbsp; </icon></div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 frame-shift">
+            <div class="card">
+                <div class="card-header fs-6">Frame Shift Drive</div>
                 <div class="d-flex" *ngIf="getBindingsFor('hyperSuperCombi')?.length">
-                    <div class="bg-light p-1 flex-shrink-0">Toggle FSD: </div><div class="border border-light p-1 w-100"><icon *ngFor="let t of getBindingsFor('hyperSuperCombi')" class="{{t}}"> &nbsp; </icon></div>
+                    <div class="bg-light p-1 fs-7">Toggle FSD: </div><div class="border border-light p-1 flex-fill"><icon *ngFor="let t of getBindingsFor('hyperSuperCombi')" class="{{t}}"> &nbsp; </icon></div>
                 </div>
                 <div class="d-flex" *ngIf="getBindingsFor('supercruise')?.length">
-                    <div class="bg-light p-1 flex-shrink-0">Toggle Supercruise: </div><div class="border border-light p-1 w-100"><icon *ngFor="let t of getBindingsFor('supercruise')" class="{{t}}"> &nbsp; </icon></div>
+                    <div class="bg-light p-1 fs-7">Toggle Supercruise: </div><div class="border border-light p-1 flex-fill"><icon *ngFor="let t of getBindingsFor('supercruise')" class="{{t}}"> &nbsp; </icon></div>
                 </div>
                 <div class="d-flex" *ngIf="getBindingsFor('hyperspace')?.length">
-                    <div class="bg-light p-1 flex-shrink-0">Toggle Hyperspace: </div><div class="border border-light p-1 w-100"><icon *ngFor="let t of getBindingsFor('hyperspace')" class="{{t}}"> &nbsp; </icon></div>
+                    <div class="bg-light p-1 fs-7">Toggle Hyperspace: </div><div class="border border-light p-1 flex-fill"><icon *ngFor="let t of getBindingsFor('hyperspace')" class="{{t}}"> &nbsp; </icon></div>
+                </div>
+                <div class="d-flex" *ngIf="getBindingsFor('toggleOrbitLines')?.length">
+                    <div class="bg-light p-1 fs-7">Toggle Orbit Lines: </div><div class="border border-light p-1 flex-fill"><icon *ngFor="let t of getBindingsFor('toggleOrbitLines')" class="{{t}}"> &nbsp; </icon></div>
+                </div>
+                <div class="d-flex" *ngIf="getBindingsFor('enterFss')?.length">
+                    <div class="bg-light p-1 fs-7">Enter FSS Mode: </div><div class="border border-light p-1 flex-fill"><icon *ngFor="let t of getBindingsFor('enterFss')" class="{{t}}"> &nbsp; </icon></div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 targeting">
+            <div class="card">
+                <div class="card-header fs-6">Targeting</div>
+                <div class="d-flex" *ngIf="getBindingsFor('targetAhead')?.length">
+                    <div class="bg-light p-1 fs-7">Select Target Ahead: </div><div class="border border-light p-1 flex-fill"><icon *ngFor="let t of getBindingsFor('targetAhead')" class="{{t}}"> &nbsp; </icon></div>
+                </div>
+                <div class="d-flex" *ngIf="getBindingsFor('cycleNextTarget')?.length">
+                    <div class="bg-light p-1 fs-7">Next Target: </div><div class="border border-light p-1 flex-fill"><icon *ngFor="let t of getBindingsFor('cycleNextTarget')" class="{{t}}"> &nbsp; </icon></div>
+                </div>
+                <div class="d-flex" *ngIf="getBindingsFor('cyclePreviousTarget')?.length">
+                    <div class="bg-light p-1 fs-7">Previous Target: </div><div class="border border-light p-1 flex-fill"><icon *ngFor="let t of getBindingsFor('cyclePreviousTarget')" class="{{t}}"> &nbsp; </icon></div>
+                </div>
+                <div class="d-flex" *ngIf="getBindingsFor('selectHighestThreat')?.length">
+                    <div class="bg-light p-1 fs-7">Select Highest Threat: </div><div class="border border-light p-1 flex-fill"><icon *ngFor="let t of getBindingsFor('selectHighestThreat')" class="{{t}}"> &nbsp; </icon></div>
+                </div>
+                <div class="d-flex" *ngIf="getBindingsFor('cycleNextHostileTarget')?.length">
+                    <div class="bg-light p-1 fs-7">Next Hostile Target: </div><div class="border border-light p-1 flex-fill"><icon *ngFor="let t of getBindingsFor('cycleNextHostileTarget')" class="{{t}}"> &nbsp; </icon></div>
+                </div>
+                <div class="d-flex" *ngIf="getBindingsFor('cyclePreviousHostileTarget')?.length">
+                    <div class="bg-light p-1 fs-7">Previous Hostile Target: </div><div class="border border-light p-1 flex-fill"><icon *ngFor="let t of getBindingsFor('cyclePreviousHostileTarget')" class="{{t}}"> &nbsp; </icon></div>
+                </div>
+                <div class="d-flex" *ngIf="getBindingsFor('targetWingman0')?.length">
+                    <div class="bg-light p-1 fs-7">Target Wingman 0: </div><div class="border border-light p-1 flex-fill"><icon *ngFor="let t of getBindingsFor('targetWingman0')" class="{{t}}"> &nbsp; </icon></div>
+                </div>
+                <div class="d-flex" *ngIf="getBindingsFor('targetWingman1')?.length">
+                    <div class="bg-light p-1 fs-7">Target Wingman 1: </div><div class="border border-light p-1 flex-fill"><icon *ngFor="let t of getBindingsFor('targetWingman1')" class="{{t}}"> &nbsp; </icon></div>
+                </div>
+                <div class="d-flex" *ngIf="getBindingsFor('targetWingman2')?.length">
+                    <div class="bg-light p-1 fs-7">Target Wingman 2: </div><div class="border border-light p-1 flex-fill"><icon *ngFor="let t of getBindingsFor('targetWingman2')" class="{{t}}"> &nbsp; </icon></div>
+                </div>
+                <div class="d-flex" *ngIf="getBindingsFor('selectWingmansTarget')?.length">
+                    <div class="bg-light p-1 fs-7">Select Wingman's Target: </div><div class="border border-light p-1 flex-fill"><icon *ngFor="let t of getBindingsFor('selectWingmansTarget')" class="{{t}}"> &nbsp; </icon></div>
+                </div>
+                <div class="d-flex" *ngIf="getBindingsFor('wingNavLock')?.length">
+                    <div class="bg-light p-1 fs-7">Wing Nav Lock: </div><div class="border border-light p-1 flex-fill"><icon *ngFor="let t of getBindingsFor('wingNavLock')" class="{{t}}"> &nbsp; </icon></div>
+                </div>
+                <div class="d-flex" *ngIf="getBindingsFor('cycleNextSubsystem')?.length">
+                    <div class="bg-light p-1 fs-7">Next Subsystem: </div><div class="border border-light p-1 flex-fill"><icon *ngFor="let t of getBindingsFor('cycleNextSubsystem')" class="{{t}}"> &nbsp; </icon></div>
+                </div>
+                <div class="d-flex" *ngIf="getBindingsFor('cyclePreviousSubsystem')?.length">
+                    <div class="bg-light p-1 fs-7">Previous Subsystem: </div><div class="border border-light p-1 flex-fill"><icon *ngFor="let t of getBindingsFor('cyclePreviousSubsystem')" class="{{t}}"> &nbsp; </icon></div>
+                </div>
+                <div class="d-flex" *ngIf="getBindingsFor('targetNextSystemInRoute')?.length">
+                    <div class="bg-light p-1 fs-7">Next System in Route: </div><div class="border border-light p-1 flex-fill"><icon *ngFor="let t of getBindingsFor('targetNextSystemInRoute')" class="{{t}}"> &nbsp; </icon></div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 weapons">
+            <div class="card">
+                <div class="card-header fs-6">Weapons</div>
+                <div class="d-flex" *ngIf="getBindingsFor('primaryFire')?.length">
+                    <div class="bg-light p-1 fs-6">Primary Fire: </div><div class="border border-light p-1 flex-fill"><icon *ngFor="let t of getBindingsFor('primaryFire')" class="{{t}}"> &nbsp; </icon></div>
+                </div>
+                <div class="d-flex" *ngIf="getBindingsFor('secondaryFire')?.length">
+                    <div class="bg-light p-1 fs-6">Secondary Fire: </div><div class="border border-light p-1 flex-fill"><icon *ngFor="let t of getBindingsFor('secondaryFire')" class="{{t}}"> &nbsp; </icon></div>
+                </div>
+                <div class="d-flex" *ngIf="getBindingsFor('cycleNextFireGroup')?.length">
+                    <div class="bg-light p-1 fs-6">Next Fire Group: </div><div class="border border-light p-1 flex-fill"><icon *ngFor="let t of getBindingsFor('cycleNextFireGroup')" class="{{t}}"> &nbsp; </icon></div>
+                </div>
+                <div class="d-flex" *ngIf="getBindingsFor('cyclePreviousFireGroup')?.length">
+                    <div class="bg-light p-1 fs-6">Previous Fire Group: </div><div class="border border-light p-1 flex-fill"><icon *ngFor="let t of getBindingsFor('cyclePreviousFireGroup')" class="{{t}}"> &nbsp; </icon></div>
+                </div>
+                <div class="d-flex" *ngIf="getBindingsFor('toggleHardpoints')?.length">
+                    <div class="bg-light p-1 fs-6">Toggle Hardpoints: </div><div class="border border-light p-1 flex-fill"><icon *ngFor="let t of getBindingsFor('toggleHardpoints')" class="{{t}}"> &nbsp; </icon></div>
+                </div>
+                <div class="d-flex" *ngIf="getBindingsFor('toggleHudMode')?.length">
+                    <div class="bg-light p-1 fs-6">Toggle HUD Mode: </div><div class="border border-light p-1 flex-fill"><icon *ngFor="let t of getBindingsFor('toggleHudMode')" class="{{t}}"> &nbsp; </icon></div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 utilities">
+            <div class="card">
+                <div class="card-header fs-6">Utilities</div>
+                <div class="d-flex" *ngIf="getBindingsFor('deployHeatsink')?.length">
+                    <div class="bg-light p-1 fs-7">Deploy Heatsink: </div><div class="border border-light p-1 flex-fill"><icon *ngFor="let t of getBindingsFor('deployHeatsink')" class="{{t}}"> &nbsp; </icon></div>
+                </div>
+                <div class="d-flex" *ngIf="getBindingsFor('useShieldCell')?.length">
+                    <div class="bg-light p-1 fs-7">Use Shield Cell: </div><div class="border border-light p-1 flex-fill"><icon *ngFor="let t of getBindingsFor('useShieldCell')" class="{{t}}"> &nbsp; </icon></div>
+                </div>
+                <div class="d-flex" *ngIf="getBindingsFor('useChaff')?.length">
+                    <div class="bg-light p-1 fs-7">Use Chaff: </div><div class="border border-light p-1 flex-fill"><icon *ngFor="let t of getBindingsFor('useChaff')" class="{{t}}"> &nbsp; </icon></div>
+                </div>
+                <div class="d-flex" *ngIf="getBindingsFor('chargeEcm')?.length">
+                    <div class="bg-light p-1 fs-7">Charge ECM: </div><div class="border border-light p-1 flex-fill"><icon *ngFor="let t of getBindingsFor('chargeEcm')" class="{{t}}"> &nbsp; </icon></div>
                 </div>
             </div>
         </div>
