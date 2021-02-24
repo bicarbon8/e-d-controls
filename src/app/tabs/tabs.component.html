@@ -1,24 +1,24 @@
 <div class="container">
     <ul class="nav nav-tabs" id="myTab" role="tablist">
       <li class="nav-item" role="presentation">
-        <button class="nav-link active" id="ship-tab" data-bs-toggle="tab" data-bs-target="#ship" type="button" role="tab" aria-controls="ship" aria-selected="true">Ship</button>
+        <button (click)="refreshLayout()" class="nav-link active" id="ship-tab" data-bs-toggle="tab" data-bs-target="#ship" type="button" role="tab" aria-controls="ship" aria-selected="true">Ship</button>
       </li>
       <li class="nav-item" role="presentation">
-        <button class="nav-link" id="srv-tab" data-bs-toggle="tab" data-bs-target="#srv" type="button" role="tab" aria-controls="srv" aria-selected="false">SRV</button>
+        <button (click)="refreshLayout()" class="nav-link" id="srv-tab" data-bs-toggle="tab" data-bs-target="#srv" type="button" role="tab" aria-controls="srv" aria-selected="false">SRV</button>
       </li>
       <li class="nav-item" role="presentation">
-        <button class="nav-link" id="galaxymap-tab" data-bs-toggle="tab" data-bs-target="#galaxymap" type="button" role="tab" aria-controls="galaxymap" aria-selected="false">Galaxy Map</button>
+        <button (click)="refreshLayout()" class="nav-link" id="galaxymap-tab" data-bs-toggle="tab" data-bs-target="#galaxymap" type="button" role="tab" aria-controls="galaxymap" aria-selected="false">Galaxy Map</button>
       </li>
       <li class="nav-item" role="presentation">
-        <button class="nav-link" id="freecamera-tab" data-bs-toggle="tab" data-bs-target="#freecamera" type="button" role="tab" aria-controls="freecamera" aria-selected="false">Free Camera</button>
+        <button (click)="refreshLayout()" class="nav-link" id="freecamera-tab" data-bs-toggle="tab" data-bs-target="#freecamera" type="button" role="tab" aria-controls="freecamera" aria-selected="false">Free Camera</button>
       </li>
       <li class="nav-item" role="presentation">
-        <button class="nav-link" id="menus-tab" data-bs-toggle="tab" data-bs-target="#menus" type="button" role="tab" aria-controls="menus" aria-selected="false">Menus / UI</button>
+        <button (click)="refreshLayout()" class="nav-link" id="menus-tab" data-bs-toggle="tab" data-bs-target="#menus" type="button" role="tab" aria-controls="menus" aria-selected="false">Menus / UI</button>
       </li>
     </ul>
     <div class="tab-content" id="myTabContent">
       <div class="tab-pane fade show active" id="ship" role="tabpanel" aria-labelledby="ship-tab"><app-ship-tab></app-ship-tab></div>
-      <div class="tab-pane fade" id="srv" role="tabpanel" aria-labelledby="srv-tab">...</div>
+      <div class="tab-pane fade" id="srv" role="tabpanel" aria-labelledby="srv-tab"><app-srv-tab></app-srv-tab></div>
       <div class="tab-pane fade" id="galaxymap" role="tabpanel" aria-labelledby="galaxymap-tab">...</div>
       <div class="tab-pane fade" id="freecamera" role="tabpanel" aria-labelledby="freecamera-tab">...</div>
       <div class="tab-pane fade" id="menus" role="tabpanel" aria-labelledby="menus-tab">...</div>

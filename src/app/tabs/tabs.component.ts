@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-tabs',
@@ -6,5 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./tabs.component.css']
 })
 export class TabsComponent {
-
+  refreshLayout(): void {
+    
+  }
 }

@@ -1,1 +1,4 @@
-declare var Masonry: any;
+declare class Masonry {
+    constructor(cssSelector: string);
+    layout(): void;
+}

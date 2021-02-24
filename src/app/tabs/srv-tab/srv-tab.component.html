@@ -1,0 +1,19 @@
+<div class="container">
+    <div class="row srv-grid" data-masonry='{"percentPosition": true }'>
+        <div class="col-lg-4 heading">
+            <app-tab-card [data]="getHeadingData()"></app-tab-card>
+        </div>
+        <div class="col-lg-4 movement">
+            <app-tab-card [data]="getMovementData()"></app-tab-card>
+        </div>
+        <div class="col-lg-4 driving-misc">
+            <app-tab-card [data]="getDrivingMiscData()"></app-tab-card>
+        </div>
+        <div class="col-lg-4 targeting">
+            <app-tab-card [data]="getTargetingData()"></app-tab-card>
+        </div>
+        <div class="col-lg-4 weapons">
+            <app-tab-card [data]="getWeaponsData()"></app-tab-card>
+        </div>
+    </div>
+</div>

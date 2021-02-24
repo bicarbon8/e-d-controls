@@ -5,83 +5,88 @@ div.col-lg-4 {
     padding-top: 10px;
     padding-bottom: 10px;
 }
-div.card-header:only-child {
-    display: none;
-}
-div icon {
+i.key-sprite {
     display: inline-block;
     width: 32px;
     height: 32px;
 }
-icon.GamePad_RThumb {
+i.key-sprite.GamePad_RThumb {
     background: url('/assets/img/GameControllerButtons.png') -128px 64px no-repeat;
     zoom: 0.75;
 }
-icon.GamePad_RStickX {
+i.key-sprite.GamePad_RStickX {
     background: url('/assets/img/GameControllerButtons.png') -96px -64px no-repeat;
     zoom: 0.75;
 }
-icon.GamePad_RStickY {
+i.key-sprite.GamePad_RStickY {
     background: url('/assets/img/GameControllerButtons.png') -224px -64px no-repeat;
     zoom: 0.75;
 }
-icon.GamePad_LThumb {
+i.key-sprite.GamePad_LThumb {
     background: url('/assets/img/GameControllerButtons.png') -128px -32px no-repeat;
     zoom: 0.75;
 }
-icon.GamePad_LStickX {
+i.key-sprite.GamePad_LStickX {
     background: url('/assets/img/GameControllerButtons.png') -96px -32px no-repeat;
     zoom: 0.75;
 }
-icon.GamePad_LStickY {
+i.key-sprite.GamePad_LStickY {
     background: url('/assets/img/GameControllerButtons.png') -224px -32px no-repeat;
     zoom: 0.75;
 }
-icon.GamePad_DPadUp {
+i.key-sprite.GamePad_DPadUp {
     background: url('/assets/img/GameControllerButtons.png') -192px -96px no-repeat;
     zoom: 0.75;
 }
-icon.GamePad_DPadRight {
+i.key-sprite.GamePad_DPadRight {
     background: url('/assets/img/GameControllerButtons.png') -160px -96px no-repeat;
     zoom: 0.75;
 }
-icon.GamePad_DPadDown {
+i.key-sprite.GamePad_DPadDown {
     background: url('/assets/img/GameControllerButtons.png') -32px -96px no-repeat;
     zoom: 0.75;
 }
-icon.GamePad_DPadLeft {
+i.key-sprite.GamePad_DPadLeft {
     background: url('/assets/img/GameControllerButtons.png') -64px -96px no-repeat;
     zoom: 0.75;
 }
-icon.GamePad_FaceUp {
+i.key-sprite.GamePad_FaceUp {
     background: url('/assets/img/GameControllerButtons.png') -96px 0px no-repeat;
     zoom: 0.75;
 }
-icon.GamePad_FaceRight {
+i.key-sprite.GamePad_FaceRight {
     background: url('/assets/img/GameControllerButtons.png') -32px 0px no-repeat;
     zoom: 0.75;
 }
-icon.GamePad_FaceDown {
+i.key-sprite.GamePad_FaceDown {
     background: url('/assets/img/GameControllerButtons.png') -0px 0px no-repeat;
     zoom: 0.75;
 }
-icon.GamePad_FaceLeft {
+i.key-sprite.GamePad_FaceLeft {
     background: url('/assets/img/GameControllerButtons.png') -64px 0px no-repeat;
     zoom: 0.75;
 }
-icon.GamePad_LBumper {
+i.key-sprite.GamePad_LBumper {
     background: url('/assets/img/GameControllerButtons.png') -128px 0px no-repeat;
     zoom: 0.75;
 }
-icon.GamePad_RBumper {
+i.key-sprite.GamePad_RBumper {
     background: url('/assets/img/GameControllerButtons.png') -192px 0px no-repeat;
     zoom: 0.75;
 }
-icon.Pos_GamePad_LTrigger {
+i.key-sprite.Pos_GamePad_LTrigger {
     background: url('/assets/img/GameControllerButtons.png') -160px 0px no-repeat;
     zoom: 0.75;
 }
-icon.Pos_GamePad_RTrigger {
+i.key-sprite.Pos_GamePad_RTrigger {
+    background: url('/assets/img/GameControllerButtons.png') -224px 0px no-repeat;
+    zoom: 0.75;
+}
+i.key-sprite.GamePad_LTrigger {
+    background: url('/assets/img/GameControllerButtons.png') -160px 0px no-repeat;
+    zoom: 0.75;
+}
+i.key-sprite.GamePad_RTrigger {
     background: url('/assets/img/GameControllerButtons.png') -224px 0px no-repeat;
     zoom: 0.75;
 }
