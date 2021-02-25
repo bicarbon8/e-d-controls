@@ -1,0 +1,13 @@
+<div class="container">
+    <div class="row map-grid" data-masonry='{"percentPosition": true }'>
+        <div class="col-lg-4 map-controls">
+            <app-tab-card [data]="getMapControlsData()"></app-tab-card>
+        </div>
+        <div class="col-lg-4 camera-controls">
+            <app-tab-card [data]="getCameraControlsData()"></app-tab-card>
+        </div>
+        <div class="col-lg-4 ui-controls">
+            <app-tab-card [data]="getUiControlsData()"></app-tab-card>
+        </div>
+    </div>
+</div>

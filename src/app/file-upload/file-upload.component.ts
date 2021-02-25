@@ -17,7 +17,7 @@ export class FileUploadComponent implements OnInit, OnDestroy {
   private _xmlParser: DOMParser;
 
   constructor(private bindings: BindingsDataService) {
-      this.requiredFileType = 'text/xml';
+      this.requiredFileType = '.binds';
       this._xmlParser = new DOMParser();
   }
   

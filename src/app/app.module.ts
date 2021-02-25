@@ -8,6 +8,7 @@ import { FileUploadComponent } from './file-upload/file-upload.component';
 import { ShipTabComponent } from './tabs/ship-tab/ship-tab.component';
 import { SrvTabComponent } from './tabs/srv-tab/srv-tab.component';
 import { TabCardComponent } from './tabs/tab-card/tab-card.component';
+import { MapTabComponent } from './tabs/map-tab/map-tab.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { TabCardComponent } from './tabs/tab-card/tab-card.component';
     FileUploadComponent,
     ShipTabComponent,
     SrvTabComponent,
-    TabCardComponent
+    TabCardComponent,
+    MapTabComponent
   ],
   imports: [
     BrowserModule,

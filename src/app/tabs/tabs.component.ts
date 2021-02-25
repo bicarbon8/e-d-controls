@@ -1,4 +1,4 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-tabs',
@@ -7,6 +7,6 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
 })
 export class TabsComponent {
   refreshLayout(): void {
-    
+    /* triggers UI update check */
   }
 }

@@ -1,8 +1,11 @@
 import { OnInit, OnDestroy, AfterViewChecked, Component, NgZone } from "@angular/core";
 import { Subscription } from "rxjs";
 import { Find } from "src/helpers/find";
+import { ICanHaveKeyValue } from "src/helpers/ican-have-key-value";
 import { Input } from "src/helpers/input";
 import { BindingsDataService } from "../bindings-data.service";
+import { CardData } from "./tab-card/card-data";
+import { CardDataControls } from "./tab-card/card-data-controls";
 
 @Component({ template: '' })
 export abstract class BaseTabComponent implements OnInit, OnDestroy, AfterViewChecked {
@@ -36,6 +39,19 @@ export abstract class BaseTabComponent implements OnInit, OnDestroy, AfterViewCh
         }
       }
       return [];
+    }
+
+    getCardData(name: string, keyValPairs: Map<string, string>): CardData {
+      let keys: string[];
+      let controls: CardDataControls[] = [];
+
+      keyValPairs.forEach((val: string, key: string) => {
+        keys = this.getKeysFor(val);
+        if (keys?.length > 0) { controls.push({command: key, keys: keys}); }
+        keys = null;
+      });
+
+      return {name: name, controls: controls};
     }
   
     ngOnInit(): void {
