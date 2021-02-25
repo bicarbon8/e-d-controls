@@ -1,4 +1,4 @@
 export interface CardDataControls {
     command: string;
-    keys: string[];
+    keys?: string[];
 }

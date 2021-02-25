@@ -8,4 +8,6 @@ import { CardData } from './card-data';
 })
 export class TabCardComponent {
   @Input() data: CardData;
+
+  showUnassigned: boolean = false;
 }

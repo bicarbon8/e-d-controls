@@ -44,14 +44,16 @@ export abstract class BaseTabComponent implements OnInit, OnDestroy, AfterViewCh
     getCardData(name: string, keyValPairs: Map<string, string>): CardData {
       let keys: string[];
       let controls: CardDataControls[] = [];
+      let unassigned: CardDataControls[] = [];
 
-      keyValPairs.forEach((val: string, key: string) => {
-        keys = this.getKeysFor(val);
-        if (keys?.length > 0) { controls.push({command: key, keys: keys}); }
+      keyValPairs.forEach((locator: string, command: string) => {
+        keys = this.getKeysFor(locator);
+        if (keys?.length > 0) { controls.push({command: command, keys: keys}); }
+        else { unassigned.push({command: command}) }
         keys = null;
       });
 
-      return {name: name, controls: controls};
+      return {name: name, controls: controls, unassigned: unassigned};
     }
   
     ngOnInit(): void {
