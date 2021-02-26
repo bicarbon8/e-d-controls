@@ -83,16 +83,10 @@ i.key-sprite.GamePad_LBumper {
 i.key-sprite.GamePad_RBumper {
     background: url('/assets/img/GameControllerButtons.png') -192px 0px no-repeat;
 }
-i.key-sprite.Pos_GamePad_LTrigger {
+i.key-sprite:is(.Pos_GamePad_LTrigger, .Neg_GamePad_LTrigger, .GamePad_LTrigger) {
     background: url('/assets/img/GameControllerButtons.png') -160px 0px no-repeat;
 }
-i.key-sprite.Pos_GamePad_RTrigger {
-    background: url('/assets/img/GameControllerButtons.png') -224px 0px no-repeat;
-}
-i.key-sprite.GamePad_LTrigger {
-    background: url('/assets/img/GameControllerButtons.png') -160px 0px no-repeat;
-}
-i.key-sprite.GamePad_RTrigger {
+i.key-sprite:is(.Pos_GamePad_RTrigger, .Neg_GamePad_RTrigger, .GamePad_RTrigger) {
     background: url('/assets/img/GameControllerButtons.png') -224px 0px no-repeat;
 }
 i.key-sprite.GamePad_Back {
