@@ -108,82 +108,6 @@ const ɵMapTabComponent_BaseFactory = /*@__PURE__*/ _angular_core__WEBPACK_IMPOR
 
 /***/ }),
 
-/***/ "AmOf":
-/*!****************************!*\
-  !*** ./src/helpers/xml.ts ***!
-  \****************************/
-/*! exports provided: XML */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "XML", function() { return XML; });
-var XML;
-(function (XML) {
-    function parseText(sValue) {
-        if (/^\s*$/.test(sValue)) {
-            return null;
-        }
-        if (/^(?:true|false)$/i.test(sValue)) {
-            return sValue.toLowerCase() === "true";
-        }
-        if (isFinite(sValue)) {
-            return parseFloat(sValue);
-        }
-        if (isFinite(Date.parse(sValue))) {
-            return new Date(sValue);
-        }
-        return sValue;
-    }
-    function toObject(oXMLParent) {
-        var vResult = {}, nLength = 0, sCollectedTxt = "";
-        let oXMLParentElement = oXMLParent;
-        if ((oXMLParentElement === null || oXMLParentElement === void 0 ? void 0 : oXMLParentElement.hasAttributes) && (oXMLParentElement === null || oXMLParentElement === void 0 ? void 0 : oXMLParentElement.attributes) && (oXMLParentElement === null || oXMLParentElement === void 0 ? void 0 : oXMLParentElement.hasAttributes())) {
-            vResult = {};
-            for (nLength; nLength < oXMLParentElement.attributes.length; nLength++) {
-                let oAttrib = oXMLParentElement.attributes.item(nLength);
-                vResult["@" + oAttrib.name.toLowerCase()] = parseText(oAttrib.value.trim());
-            }
-        }
-        if (oXMLParent.hasChildNodes()) {
-            for (var oNode, sProp, vContent, nItem = 0; nItem < oXMLParent.childNodes.length; nItem++) {
-                oNode = oXMLParent.childNodes.item(nItem);
-                if (oNode.nodeType === 4) {
-                    sCollectedTxt += oNode.nodeValue;
-                } /* nodeType is "CDATASection" (4) */
-                else if (oNode.nodeType === 3) {
-                    sCollectedTxt += oNode.nodeValue.trim();
-                } /* nodeType is "Text" (3) */
-                else if (oNode.nodeType === 1 && !oNode.prefix) { /* nodeType is "Element" (1) */
-                    if (nLength === 0) {
-                        vResult = {};
-                    }
-                    sProp = oNode.nodeName.toLowerCase();
-                    vContent = toObject(oNode);
-                    if (vResult.hasOwnProperty(sProp)) {
-                        if (vResult[sProp].constructor !== Array) {
-                            vResult[sProp] = [vResult[sProp]];
-                        }
-                        vResult[sProp].push(vContent);
-                    }
-                    else {
-                        vResult[sProp] = vContent;
-                        nLength++;
-                    }
-                }
-            }
-        }
-        if (sCollectedTxt) {
-            nLength > 0 ? vResult.keyValue = parseText(sCollectedTxt) : vResult = parseText(sCollectedTxt);
-        }
-        return vResult;
-    }
-    XML.toObject = toObject;
-})(XML || (XML = {}));
-
-
-/***/ }),
-
 /***/ "AytR":
 /*!*****************************************!*\
   !*** ./src/environments/environment.ts ***!
@@ -212,10 +136,10 @@ const environment = {
 
 /***/ }),
 
-/***/ "Qznh":
-/*!*****************************!*\
-  !*** ./src/helpers/find.ts ***!
-  \*****************************/
+/***/ "B5v9":
+/*!*********************************!*\
+  !*** ./src/app/helpers/find.ts ***!
+  \*********************************/
 /*! exports provided: Find */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -298,6 +222,82 @@ var Find;
 
 /***/ }),
 
+/***/ "JTyR":
+/*!********************************!*\
+  !*** ./src/app/helpers/xml.ts ***!
+  \********************************/
+/*! exports provided: XML */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "XML", function() { return XML; });
+var XML;
+(function (XML) {
+    function parseText(sValue) {
+        if (/^\s*$/.test(sValue)) {
+            return null;
+        }
+        if (/^(?:true|false)$/i.test(sValue)) {
+            return sValue.toLowerCase() === "true";
+        }
+        if (isFinite(sValue)) {
+            return parseFloat(sValue);
+        }
+        if (isFinite(Date.parse(sValue))) {
+            return new Date(sValue);
+        }
+        return sValue;
+    }
+    function toObject(oXMLParent) {
+        var vResult = {}, nLength = 0, sCollectedTxt = "";
+        let oXMLParentElement = oXMLParent;
+        if ((oXMLParentElement === null || oXMLParentElement === void 0 ? void 0 : oXMLParentElement.hasAttributes) && (oXMLParentElement === null || oXMLParentElement === void 0 ? void 0 : oXMLParentElement.attributes) && (oXMLParentElement === null || oXMLParentElement === void 0 ? void 0 : oXMLParentElement.hasAttributes())) {
+            vResult = {};
+            for (nLength; nLength < oXMLParentElement.attributes.length; nLength++) {
+                let oAttrib = oXMLParentElement.attributes.item(nLength);
+                vResult["@" + oAttrib.name.toLowerCase()] = parseText(oAttrib.value.trim());
+            }
+        }
+        if (oXMLParent.hasChildNodes()) {
+            for (var oNode, sProp, vContent, nItem = 0; nItem < oXMLParent.childNodes.length; nItem++) {
+                oNode = oXMLParent.childNodes.item(nItem);
+                if (oNode.nodeType === 4) {
+                    sCollectedTxt += oNode.nodeValue;
+                } /* nodeType is "CDATASection" (4) */
+                else if (oNode.nodeType === 3) {
+                    sCollectedTxt += oNode.nodeValue.trim();
+                } /* nodeType is "Text" (3) */
+                else if (oNode.nodeType === 1 && !oNode.prefix) { /* nodeType is "Element" (1) */
+                    if (nLength === 0) {
+                        vResult = {};
+                    }
+                    sProp = oNode.nodeName.toLowerCase();
+                    vContent = toObject(oNode);
+                    if (vResult.hasOwnProperty(sProp)) {
+                        if (vResult[sProp].constructor !== Array) {
+                            vResult[sProp] = [vResult[sProp]];
+                        }
+                        vResult[sProp].push(vContent);
+                    }
+                    else {
+                        vResult[sProp] = vContent;
+                        nLength++;
+                    }
+                }
+            }
+        }
+        if (sCollectedTxt) {
+            nLength > 0 ? vResult.keyValue = parseText(sCollectedTxt) : vResult = parseText(sCollectedTxt);
+        }
+        return vResult;
+    }
+    XML.toObject = toObject;
+})(XML || (XML = {}));
+
+
+/***/ }),
+
 /***/ "RWlP":
 /*!******************************************************!*\
   !*** ./src/app/file-upload/file-upload.component.ts ***!
@@ -309,7 +309,7 @@ var Find;
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FileUploadComponent", function() { return FileUploadComponent; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "mrSG");
-/* harmony import */ var src_helpers_xml__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! src/helpers/xml */ "AmOf");
+/* harmony import */ var _helpers_xml__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../helpers/xml */ "JTyR");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ "fXoL");
 /* harmony import */ var _bindings_data_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../bindings-data.service */ "o65v");
 
@@ -340,7 +340,7 @@ class FileUploadComponent {
                         this.fileName = file.name;
                         let text = yield file.text();
                         let bindingsDoc = this._xmlParser.parseFromString(text, 'text/xml');
-                        let bindingsObj = src_helpers_xml__WEBPACK_IMPORTED_MODULE_1__["XML"].toObject(bindingsDoc);
+                        let bindingsObj = _helpers_xml__WEBPACK_IMPORTED_MODULE_1__["XML"].toObject(bindingsDoc);
                         console.info('successfully parsed');
                         this.bindings.updateDocument(JSON.stringify(bindingsObj));
                     }
@@ -764,7 +764,7 @@ TabsComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComp
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "BaseTabComponent", function() { return BaseTabComponent; });
-/* harmony import */ var src_helpers_find__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! src/helpers/find */ "Qznh");
+/* harmony import */ var _helpers_find__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../helpers/find */ "B5v9");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "fXoL");
 /* harmony import */ var _bindings_data_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../bindings-data.service */ "o65v");
 
@@ -790,7 +790,7 @@ class BaseTabComponent {
     }
     getKeysFor(key) {
         if (this.bindings) {
-            let ctrl = src_helpers_find__WEBPACK_IMPORTED_MODULE_0__["Find"].gamePadInput(this.bindings, key);
+            let ctrl = _helpers_find__WEBPACK_IMPORTED_MODULE_0__["Find"].gamePadInput(this.bindings, key);
             if (ctrl) {
                 return ctrl.keys.reverse();
             }

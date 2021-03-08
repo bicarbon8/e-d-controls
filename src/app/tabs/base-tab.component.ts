@@ -1,8 +1,7 @@
 import { OnInit, OnDestroy, AfterViewChecked, Component, NgZone } from "@angular/core";
 import { Subscription } from "rxjs";
-import { Find } from "src/helpers/find";
-import { ICanHaveKeyValue } from "src/helpers/ican-have-key-value";
-import { Input } from "src/helpers/input";
+import { Find } from "../helpers/find";
+import { Input } from "../helpers/input";
 import { BindingsDataService } from "../bindings-data.service";
 import { CardData } from "./tab-card/card-data";
 import { CardDataControls } from "./tab-card/card-data-controls";

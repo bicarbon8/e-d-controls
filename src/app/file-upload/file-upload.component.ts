@@ -1,6 +1,6 @@
 import { Component, Input, OnDestroy, OnInit } from '@angular/core';
 import { Subscription } from 'rxjs';
-import { XML } from 'src/helpers/xml';
+import { XML } from '../helpers/xml';
 import { BindingsDataService } from '../bindings-data.service';
 
 @Component({
