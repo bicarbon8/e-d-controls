@@ -942,8 +942,6 @@ __webpack_require__.r(__webpack_exports__);
 
 class EDControlsComponent {
     constructor() { }
-    ngOnInit() {
-    }
 }
 EDControlsComponent.ɵfac = function EDControlsComponent_Factory(t) { return new (t || EDControlsComponent)(); };
 EDControlsComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: EDControlsComponent, selectors: [["app-e-d-controls"]], decls: 2, vars: 0, template: function EDControlsComponent_Template(rf, ctx) { if (rf & 1) {
