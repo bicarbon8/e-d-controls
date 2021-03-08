@@ -3,26 +3,16 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { TabsComponent } from './tabs/tabs.component';
-import { FileUploadComponent } from './file-upload/file-upload.component';
-import { ShipTabComponent } from './tabs/ship-tab/ship-tab.component';
-import { SrvTabComponent } from './tabs/srv-tab/srv-tab.component';
-import { TabCardComponent } from './tabs/tab-card/tab-card.component';
-import { MapTabComponent } from './tabs/map-tab/map-tab.component';
+import { EDControlsModule } from './e-d-controls/e-d-controls.module';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    TabsComponent,
-    FileUploadComponent,
-    ShipTabComponent,
-    SrvTabComponent,
-    TabCardComponent,
-    MapTabComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    EDControlsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

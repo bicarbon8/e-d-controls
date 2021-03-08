@@ -1,13 +1,13 @@
-import { Component, OnInit } from '@angular/core';
-import { BaseTabComponent } from '../base-tab.component';
+import { Component } from '@angular/core';
+import { BaseTab } from '../base-tab';
 import { CardData } from '../tab-card/card-data';
 
 @Component({
   selector: 'app-map-tab',
   templateUrl: './map-tab.component.html',
-  styleUrls: ['./map-tab.component.css']
+  styleUrls: ['../tabs.component.css']
 })
-export class MapTabComponent extends BaseTabComponent {
+export class MapTabComponent extends BaseTab {
   getMasonrySelector(): string {
     return '.map-grid';
   }

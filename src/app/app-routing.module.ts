@@ -1,9 +1,10 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AppComponent } from './app.component';
+import { EDControlsComponent } from './e-d-controls/e-d-controls.component';
 
 const routes: Routes = [
-  {path: 'e-d-controls', component: AppComponent}
+  {path: '', component: EDControlsComponent},
+  {path: 'e-d-controls', component: EDControlsComponent}
 ];
 
 @NgModule({

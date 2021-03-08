@@ -1,13 +1,13 @@
 import { Component } from '@angular/core';
-import { BaseTabComponent } from '../base-tab.component';
+import { BaseTab } from '../base-tab';
 import { CardData } from '../tab-card/card-data';
 
 @Component({
   selector: 'app-srv-tab',
   templateUrl: './srv-tab.component.html',
-  styleUrls: ['./srv-tab.component.css']
+  styleUrls: ['../tabs.component.css']
 })
-export class SrvTabComponent extends BaseTabComponent {
+export class SrvTabComponent extends BaseTab {
   getMasonrySelector(): string {
     return '.srv-grid';
   }

@@ -1,7 +1,7 @@
-import { Component, Input, OnDestroy, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Subscription } from 'rxjs';
-import { XML } from '../helpers/xml';
 import { BindingsDataService } from '../bindings-data.service';
+import { XML } from '../helpers/xml';
 
 @Component({
   selector: 'app-file-upload',

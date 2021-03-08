@@ -1,13 +1,13 @@
 import { Component } from '@angular/core';
-import { BaseTabComponent } from '../base-tab.component';
+import { BaseTab } from '../base-tab';
 import { CardData } from '../tab-card/card-data';
 
 @Component({
   selector: 'app-ship-tab',
   templateUrl: './ship-tab.component.html',
-  styleUrls: ['./ship-tab.component.css']
+  styleUrls: ['../tabs.component.css']
 })
-export class ShipTabComponent extends BaseTabComponent {
+export class ShipTabComponent extends BaseTab {
   getMasonrySelector(): string {
     return '.ship-grid';
   }
