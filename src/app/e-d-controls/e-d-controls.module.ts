@@ -7,6 +7,7 @@ import { SrvTabComponent } from './tabs/srv-tab/srv-tab.component';
 import { TabCardComponent } from './tabs/tab-card/tab-card.component';
 import { TabsComponent } from './tabs/tabs.component';
 import { EDControlsComponent } from './e-d-controls.component';
+import { EDControlsRoutingModule } from './e-d-controls-routing.module';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { EDControlsComponent } from './e-d-controls.component';
     EDControlsComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    EDControlsRoutingModule
   ],
   exports: [
     EDControlsComponent

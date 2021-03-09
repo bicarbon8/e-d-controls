@@ -30,7 +30,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _tabs_tab_card_tab_card_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./tabs/tab-card/tab-card.component */ "EXeD");
 /* harmony import */ var _tabs_tabs_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./tabs/tabs.component */ "xItX");
 /* harmony import */ var _e_d_controls_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./e-d-controls.component */ "vOet");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @angular/core */ "fXoL");
+/* harmony import */ var _e_d_controls_routing_module__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./e-d-controls-routing.module */ "k+gZ");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @angular/core */ "fXoL");
+
 
 
 
@@ -42,17 +44,19 @@ __webpack_require__.r(__webpack_exports__);
 
 class EDControlsModule {
 }
-EDControlsModule.ɵmod = _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵdefineNgModule"]({ type: EDControlsModule });
-EDControlsModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵdefineInjector"]({ factory: function EDControlsModule_Factory(t) { return new (t || EDControlsModule)(); }, imports: [[
-            _angular_common__WEBPACK_IMPORTED_MODULE_0__["CommonModule"]
+EDControlsModule.ɵmod = _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵdefineNgModule"]({ type: EDControlsModule });
+EDControlsModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵdefineInjector"]({ factory: function EDControlsModule_Factory(t) { return new (t || EDControlsModule)(); }, imports: [[
+            _angular_common__WEBPACK_IMPORTED_MODULE_0__["CommonModule"],
+            _e_d_controls_routing_module__WEBPACK_IMPORTED_MODULE_8__["EDControlsRoutingModule"]
         ]] });
-(function () { (typeof ngJitMode === "undefined" || ngJitMode) && _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵsetNgModuleScope"](EDControlsModule, { declarations: [_tabs_tabs_component__WEBPACK_IMPORTED_MODULE_6__["TabsComponent"],
+(function () { (typeof ngJitMode === "undefined" || ngJitMode) && _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵsetNgModuleScope"](EDControlsModule, { declarations: [_tabs_tabs_component__WEBPACK_IMPORTED_MODULE_6__["TabsComponent"],
         _file_upload_file_upload_component__WEBPACK_IMPORTED_MODULE_1__["FileUploadComponent"],
         _tabs_ship_tab_ship_tab_component__WEBPACK_IMPORTED_MODULE_3__["ShipTabComponent"],
         _tabs_srv_tab_srv_tab_component__WEBPACK_IMPORTED_MODULE_4__["SrvTabComponent"],
         _tabs_tab_card_tab_card_component__WEBPACK_IMPORTED_MODULE_5__["TabCardComponent"],
         _tabs_map_tab_map_tab_component__WEBPACK_IMPORTED_MODULE_2__["MapTabComponent"],
-        _e_d_controls_component__WEBPACK_IMPORTED_MODULE_7__["EDControlsComponent"]], imports: [_angular_common__WEBPACK_IMPORTED_MODULE_0__["CommonModule"]], exports: [_e_d_controls_component__WEBPACK_IMPORTED_MODULE_7__["EDControlsComponent"]] }); })();
+        _e_d_controls_component__WEBPACK_IMPORTED_MODULE_7__["EDControlsComponent"]], imports: [_angular_common__WEBPACK_IMPORTED_MODULE_0__["CommonModule"],
+        _e_d_controls_routing_module__WEBPACK_IMPORTED_MODULE_8__["EDControlsRoutingModule"]], exports: [_e_d_controls_component__WEBPACK_IMPORTED_MODULE_7__["EDControlsComponent"]] }); })();
 
 
 /***/ }),
@@ -701,6 +705,36 @@ AppModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵdefineInjector
 
 /***/ }),
 
+/***/ "k+gZ":
+/*!*************************************************************!*\
+  !*** ./src/app/e-d-controls/e-d-controls-routing.module.ts ***!
+  \*************************************************************/
+/*! exports provided: EDControlsRoutingModule */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "EDControlsRoutingModule", function() { return EDControlsRoutingModule; });
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/router */ "tyNb");
+/* harmony import */ var _e_d_controls_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./e-d-controls.component */ "vOet");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ "fXoL");
+
+
+
+
+const routes = [
+    { path: '', component: _e_d_controls_component__WEBPACK_IMPORTED_MODULE_1__["EDControlsComponent"] },
+    { path: 'e-d-controls', component: _e_d_controls_component__WEBPACK_IMPORTED_MODULE_1__["EDControlsComponent"] }
+];
+class EDControlsRoutingModule {
+}
+EDControlsRoutingModule.ɵmod = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵdefineNgModule"]({ type: EDControlsRoutingModule });
+EDControlsRoutingModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵdefineInjector"]({ factory: function EDControlsRoutingModule_Factory(t) { return new (t || EDControlsRoutingModule)(); }, imports: [[_angular_router__WEBPACK_IMPORTED_MODULE_0__["RouterModule"].forChild(routes)], _angular_router__WEBPACK_IMPORTED_MODULE_0__["RouterModule"]] });
+(function () { (typeof ngJitMode === "undefined" || ngJitMode) && _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵsetNgModuleScope"](EDControlsRoutingModule, { imports: [_angular_router__WEBPACK_IMPORTED_MODULE_0__["RouterModule"]], exports: [_angular_router__WEBPACK_IMPORTED_MODULE_0__["RouterModule"]] }); })();
+
+
+/***/ }),
+
 /***/ "ngc3":
 /*!******************************************************************!*\
   !*** ./src/app/e-d-controls/tabs/ship-tab/ship-tab.component.ts ***!
@@ -1045,21 +1079,18 @@ FileUploadComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵdefi
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AppRoutingModule", function() { return AppRoutingModule; });
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/router */ "tyNb");
-/* harmony import */ var _e_d_controls_e_d_controls_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./e-d-controls/e-d-controls.component */ "vOet");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ "fXoL");
-
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "fXoL");
 
 
 
 const routes = [
-    { path: '', component: _e_d_controls_e_d_controls_component__WEBPACK_IMPORTED_MODULE_1__["EDControlsComponent"] },
-    { path: 'e-d-controls', component: _e_d_controls_e_d_controls_component__WEBPACK_IMPORTED_MODULE_1__["EDControlsComponent"] }
+    { path: '**', loadChildren: () => Promise.resolve(/*! import() */).then(__webpack_require__.bind(null, /*! ./e-d-controls/e-d-controls.module */ "6Fu/")).then((m) => m.EDControlsModule) }
 ];
 class AppRoutingModule {
 }
-AppRoutingModule.ɵmod = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵdefineNgModule"]({ type: AppRoutingModule });
-AppRoutingModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵdefineInjector"]({ factory: function AppRoutingModule_Factory(t) { return new (t || AppRoutingModule)(); }, imports: [[_angular_router__WEBPACK_IMPORTED_MODULE_0__["RouterModule"].forRoot(routes)], _angular_router__WEBPACK_IMPORTED_MODULE_0__["RouterModule"]] });
-(function () { (typeof ngJitMode === "undefined" || ngJitMode) && _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵsetNgModuleScope"](AppRoutingModule, { imports: [_angular_router__WEBPACK_IMPORTED_MODULE_0__["RouterModule"]], exports: [_angular_router__WEBPACK_IMPORTED_MODULE_0__["RouterModule"]] }); })();
+AppRoutingModule.ɵmod = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineNgModule"]({ type: AppRoutingModule });
+AppRoutingModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineInjector"]({ factory: function AppRoutingModule_Factory(t) { return new (t || AppRoutingModule)(); }, imports: [[_angular_router__WEBPACK_IMPORTED_MODULE_0__["RouterModule"].forRoot(routes)], _angular_router__WEBPACK_IMPORTED_MODULE_0__["RouterModule"]] });
+(function () { (typeof ngJitMode === "undefined" || ngJitMode) && _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵsetNgModuleScope"](AppRoutingModule, { imports: [_angular_router__WEBPACK_IMPORTED_MODULE_0__["RouterModule"]], exports: [_angular_router__WEBPACK_IMPORTED_MODULE_0__["RouterModule"]] }); })();
 
 
 /***/ }),
