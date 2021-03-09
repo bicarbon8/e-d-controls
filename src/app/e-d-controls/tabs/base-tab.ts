@@ -6,6 +6,11 @@ import { BindingsDataService } from "../bindings-data.service";
 import { CardData } from "./tab-card/card-data";
 import { CardDataControls } from "./tab-card/card-data-controls";
 
+declare class Masonry {
+  constructor(cssSelector: string);
+  layout(): void;
+}
+
 @Component({ template: '' })
 export abstract class BaseTab implements OnInit, OnDestroy, AfterViewChecked {
     bindings: Object;
