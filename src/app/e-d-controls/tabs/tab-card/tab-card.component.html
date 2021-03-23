@@ -1,13 +1,13 @@
-<div class="card">
+<div class="card my-1">
     <div class="card-header fs-6">
         <div class="d-flex">
             <div class="p-1 flex-grow-1">
                 {{data.name}}
             </div>
             <div>
-                <div class="form-check form-switch form-check-inline">
+                <div class="form-check form-switch form-check-inline" data-bs-toggle="tooltip" data-bs-placement="top" title="Show unassigned">
                     <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault" (change)="showUnassigned=!showUnassigned">
-                    <label class="form-check-label fw-light" for="flexSwitchCheckDefault">Show unassigned</label>
+                    <label class="form-check-label fw-light d-none d-md-block" for="flexSwitchCheckDefault">Show unassigned</label>
                 </div>
             </div>
         </div>

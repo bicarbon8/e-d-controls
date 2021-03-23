@@ -1,15 +1,11 @@
-import { OnInit, OnDestroy, AfterViewChecked, Component, NgZone } from "@angular/core";
+import { OnInit, OnDestroy, AfterViewChecked, Component, NgZone, HostListener } from "@angular/core";
 import { Subscription } from "rxjs";
 import { Find } from "../helpers/find";
 import { Input } from "../helpers/input";
 import { BindingsDataService } from "../bindings-data.service";
 import { CardData } from "./tab-card/card-data";
 import { CardDataControls } from "./tab-card/card-data-controls";
-
-declare class Masonry {
-  constructor(cssSelector: string);
-  layout(): void;
-}
+import * as Masonry from 'masonry-layout';
 
 @Component({ template: '' })
 export abstract class BaseTab implements OnInit, OnDestroy, AfterViewChecked {
@@ -75,8 +71,14 @@ export abstract class BaseTab implements OnInit, OnDestroy, AfterViewChecked {
       this.zone.runOutsideAngular(() => {
         setTimeout(() => {
           this.msnry?.layout();
-        }, 500);
+        }, 200);
       });
+    }
+
+    @HostListener('keydown.control.p')
+    disableMasonry(): void {
+      console.info('masonry layout disabled while printing');
+      this.msnry?.destroy();
     }
   
     ngOnDestroy(): void {

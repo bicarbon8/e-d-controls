@@ -6,7 +6,7 @@ import { XML } from '../helpers/xml';
 @Component({
   selector: 'app-file-upload',
   templateUrl: './file-upload.component.html',
-  styleUrls: ['./file-upload.component.css']
+  styleUrls: ['./file-upload.component.css', '../e-d-controls.component.css']
 })
 export class FileUploadComponent implements OnInit, OnDestroy {
   message: string;

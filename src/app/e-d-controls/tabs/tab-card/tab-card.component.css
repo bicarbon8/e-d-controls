@@ -3,6 +3,8 @@ i.key-sprite {
     width: 32px;
     height: 32px;
     zoom: 0.75;
+    -webkit-print-color-adjust: exact !important;
+    color-adjust: exact !important;
 }
 i.key-sprite.GamePad_RThumb {
     background: url('/assets/img/GameControllerButtons.png') -128px -64px no-repeat;

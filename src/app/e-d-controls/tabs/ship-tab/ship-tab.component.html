@@ -1,34 +1,32 @@
-<div class="container">
-    <div class="row ship-grid" data-masonry='{"percentPosition": true }'>
-        <div class="col-lg-4 heading">
-            <app-tab-card [data]="getHeadingData()"></app-tab-card>
-        </div>
-        <div class="col-lg-4 movement">
-            <app-tab-card [data]="getMovementData()"></app-tab-card>
-        </div>
-        <div class="col-lg-4 thrust">
-            <app-tab-card [data]="getThrustData()"></app-tab-card>
-        </div>
-        <div class="col-lg-4 flight-misc">
-            <app-tab-card [data]="getFlightMiscData()"></app-tab-card>
-        </div>
-        <div class="col-lg-4 frame-shift">
-            <app-tab-card [data]="getFrameShiftData()"></app-tab-card>
-        </div>
-        <div class="col-lg-4 targeting">
-            <app-tab-card [data]="getTargetingData()"></app-tab-card>
-        </div>
-        <div class="col-lg-4 weapons">
-            <app-tab-card [data]="getWeaponsData()"></app-tab-card>
-        </div>
-        <div class="col-lg-4 utilities">
-            <app-tab-card [data]="getUtilitiesData()"></app-tab-card>
-        </div>
-        <div class="col-lg-4 headlook">
-            <app-tab-card [data]="getHeadlookData()"></app-tab-card>
-        </div>
-        <div class="col-lg-4 menu">
-            <app-tab-card [data]="getMenuData()"></app-tab-card>
-        </div>
+<div class="row grid ship-grid" data-masonry='{"itemSelector": "grid-item", "percentPosition": true}'>
+    <div class="col-xs-12 col-sm-6 col-lg-4 grid-item heading">
+        <app-tab-card [data]="getHeadingData()"></app-tab-card>
+    </div>
+    <div class="col-xs-12 col-sm-6 col-lg-4 grid-item movement">
+        <app-tab-card [data]="getMovementData()"></app-tab-card>
+    </div>
+    <div class="col-xs-12 col-sm-6 col-lg-4 grid-item thrust">
+        <app-tab-card [data]="getThrustData()"></app-tab-card>
+    </div>
+    <div class="col-xs-12 col-sm-6 col-lg-4 grid-item flight-misc">
+        <app-tab-card [data]="getFlightMiscData()"></app-tab-card>
+    </div>
+    <div class="col-xs-12 col-sm-6 col-lg-4 grid-item frame-shift">
+        <app-tab-card [data]="getFrameShiftData()"></app-tab-card>
+    </div>
+    <div class="col-xs-12 col-sm-6 col-lg-4 grid-item targeting">
+        <app-tab-card [data]="getTargetingData()"></app-tab-card>
+    </div>
+    <div class="col-xs-12 col-sm-6 col-lg-4 grid-item weapons">
+        <app-tab-card [data]="getWeaponsData()"></app-tab-card>
+    </div>
+    <div class="col-xs-12 col-sm-6 col-lg-4 grid-item utilities">
+        <app-tab-card [data]="getUtilitiesData()"></app-tab-card>
+    </div>
+    <div class="col-xs-12 col-sm-6 col-lg-4 grid-item headlook">
+        <app-tab-card [data]="getHeadlookData()"></app-tab-card>
+    </div>
+    <div class="col-xs-12 col-sm-6 col-lg-4 grid-item menu">
+        <app-tab-card [data]="getMenuData()"></app-tab-card>
     </div>
 </div>

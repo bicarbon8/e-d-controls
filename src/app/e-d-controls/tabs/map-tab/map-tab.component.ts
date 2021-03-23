@@ -5,7 +5,7 @@ import { CardData } from '../tab-card/card-data';
 @Component({
   selector: 'app-map-tab',
   templateUrl: './map-tab.component.html',
-  styleUrls: ['../tabs.component.css']
+  styleUrls: ['../tabs.component.css', '../../e-d-controls.component.css']
 })
 export class MapTabComponent extends BaseTab {
   getMasonrySelector(): string {

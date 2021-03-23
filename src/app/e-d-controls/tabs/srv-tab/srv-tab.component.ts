@@ -5,7 +5,7 @@ import { CardData } from '../tab-card/card-data';
 @Component({
   selector: 'app-srv-tab',
   templateUrl: './srv-tab.component.html',
-  styleUrls: ['../tabs.component.css']
+  styleUrls: ['../tabs.component.css', '../../e-d-controls.component.css']
 })
 export class SrvTabComponent extends BaseTab {
   getMasonrySelector(): string {
