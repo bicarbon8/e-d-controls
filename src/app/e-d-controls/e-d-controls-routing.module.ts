@@ -3,8 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { EDControlsComponent } from './e-d-controls.component';
 
 const routes: Routes = [
-  { path: '', component: EDControlsComponent },
-  { path: 'e-d-controls', component: EDControlsComponent }
+  { path: '', component: EDControlsComponent }
 ];
 
 @NgModule({
