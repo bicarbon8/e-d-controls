@@ -1,5 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
+import 'jasmine';
 import { TabsComponent } from './tabs.component';
 
 describe('TabsComponent', () => {
