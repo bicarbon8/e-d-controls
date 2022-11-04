@@ -10,7 +10,6 @@ sharedMappings.register(
 
 module.exports = {
   output: {
-    uniqueName: "EDControls",
     publicPath: "auto"
   },
   optimization: {
