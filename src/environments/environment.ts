@@ -4,7 +4,8 @@
 
 export const environment = {
   production: false,
-  baseHref: '/'
+  baseHref: '/',
+  defaultBindingsFile: '/assets/bindings/Custom.3.0.binds'
 };
 
 /*

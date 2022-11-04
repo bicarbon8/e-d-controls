@@ -8,6 +8,7 @@ import { TabCardComponent } from './tabs/tab-card/tab-card.component';
 import { TabsComponent } from './tabs/tabs.component';
 import { EDControlsComponent } from './e-d-controls.component';
 import { EDControlsRoutingModule } from './e-d-controls-routing.module';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { EDControlsRoutingModule } from './e-d-controls-routing.module';
   ],
   imports: [
     CommonModule,
-    EDControlsRoutingModule
+    EDControlsRoutingModule,
+    HttpClientModule
   ],
   exports: [
     EDControlsComponent

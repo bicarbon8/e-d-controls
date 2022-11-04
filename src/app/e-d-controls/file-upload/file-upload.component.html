@@ -1,10 +1,11 @@
 <div class="container-fluid my-1">
   <div class="row">
-    <input type="file" class="file-input visually-hidden" [accept]="requiredFileType" (change)="parseBindingsFile($event)" #fileUpload />
+    <input type="file" class="file-input visually-hidden" [accept]="requiredFileType" (change)="handleEvent($event)" #fileUpload />
     <div class="file-upload col">
       <button color="primary" class="btn btn-primary btn-sm" (click)="fileUpload.click()">
         <i class="bi bi-controller"> </i><span class="fw-light"> {{(fileName) ? fileName : "Select Bindings File"}}</span>
       </button>
+      <span class="text-muted fs-6 ms-2 fst-italic fw-lighter">*supports version 3.0 .binds files</span>
     </div>
   </div>
 </div>
