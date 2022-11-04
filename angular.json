@@ -24,16 +24,19 @@
 							"src/.nojekyll"
 						],
 						"styles": [
-							"src/styles.css"
+							"src/styles.css",
+							"bootstrap/dist/css/bootstrap.min.css"
 						],
-						"scripts": [],
+						"scripts": [
+							"bootstrap/dist/js/bootstrap.min.js"
+						],
 						"vendorChunk": true,
 						"extractLicenses": false,
 						"buildOptimizer": false,
 						"sourceMap": true,
 						"optimization": false,
 						"namedChunks": true,
-						"extraWebpackConfig": "webpack.config.js",
+						"extraWebpackConfig": "webpack.config.cjs",
 						"commonChunk": false
 					},
 					"configurations": {
@@ -63,7 +66,7 @@
 									"maximumError": "10kb"
 								}
 							],
-							"extraWebpackConfig": "webpack.prod.config.js"
+							"extraWebpackConfig": "webpack.prod.config.cjs"
 						}
 					},
 					"defaultConfiguration": ""
@@ -74,12 +77,12 @@
 						"browserTarget": "e-d-controls:build",
 						"port": 4400,
 						"publicHost": "http://localhost:4400",
-						"extraWebpackConfig": "webpack.config.js"
+						"extraWebpackConfig": "webpack.config.cjs"
 					},
 					"configurations": {
 						"production": {
 							"browserTarget": "e-d-controls:build:production",
-							"extraWebpackConfig": "webpack.prod.config.js"
+							"extraWebpackConfig": "webpack.prod.config.cjs"
 						}
 					}
 				},
@@ -87,7 +90,7 @@
 					"builder": "ngx-build-plus:extract-i18n",
 					"options": {
 						"browserTarget": "e-d-controls:build",
-						"extraWebpackConfig": "webpack.config.js"
+						"extraWebpackConfig": "webpack.config.cjs"
 					}
 				},
 				"test": {

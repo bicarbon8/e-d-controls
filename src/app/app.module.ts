@@ -4,6 +4,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { EDControlsModule } from './e-d-controls/e-d-controls.module';
+import { APP_BASE_HREF } from '@angular/common';
+import { environment } from 'src/environments/environment';
 
 @NgModule({
   declarations: [
@@ -14,7 +16,7 @@ import { EDControlsModule } from './e-d-controls/e-d-controls.module';
     AppRoutingModule,
     EDControlsModule
   ],
-  providers: [],
+  providers: [{provide: APP_BASE_HREF, useValue : `${environment.baseHref}` }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
